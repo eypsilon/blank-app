@@ -1,0 +1,19 @@
+{
+    "name": "eypsilon/blank-app",
+    "type": "library",
+    "license": "MIT",
+    "description": "Many/Blanka - A ready-to-use boilerplate to deploy PHP Libraries and Packages on Vercel",
+    "minimum-stability": "dev",
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "Many\\": "src"
+        }
+    },
+    "require": {
+        "php": ">=8.0"
+    }
+}

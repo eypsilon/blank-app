@@ -1,0 +1,6 @@
+# Vercel
+.vercel
+
+# PHP
+/var
+/composer.lock
