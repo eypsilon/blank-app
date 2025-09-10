@@ -1,0 +1,146 @@
+<h2>Dynamic Content Loading</h2>
+
+<p>The tabs below were loaded via AJAX as plain HTML. No JavaScript execution, no event listener registration, no initialization code required. They work immediately.</p>
+<p>YpsilonEventHandler's DOM Event Scoping System enables dynamic nesting with a single event listener. When you load new tab components:</p>
+<ul>
+    <li><strong>Single listener handles all components</strong> - New components use the existing listener</li>
+    <li><strong>Automatic scope isolation</strong> - Each component operates independently</li>
+    <li><strong>No initialization required</strong> - Components work immediately after insertion</li>
+    <li><strong>Consistent performance</strong> - O(1) scaling regardless of nesting depth</li>
+</ul>
+<p>Unlike traditional frameworks that require re-initializing components after dynamic loading, YaiTabs components are functional the moment they're added to the DOM.</p>
+
+<div data-yai-tabs data-behavior="fade">
+    <nav data-controller data-align="left">
+        <button data-tab-action="open" data-open="1">Tab 1</button>
+        <button data-tab-action="open" data-open="2">Tab 2</button>
+        <button data-tab-action="open" data-open="3">Tab 3</button>
+    </nav>
+    <div data-content>
+        <div data-tab="1">
+            <h2>Tabs 2, Tab 1</h2>
+            <p>Tabs 2, Content for tab 1</p>
+        </div>
+        <div data-tab="2">
+            <h2>Tabs 2, Content 2</h2>
+            <hr>
+            <p>Tabs 2, 2. Lorem ipsum dolor sit amet?</p>
+        </div>
+        <div data-tab="3">
+            <h2>Tabs 2, 3. Lorem ipsum dolor sit amet?</h2>
+            <p>Tabs 2, Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+
+            <!--
+                Nested level 1
+            -->
+            <div data-yai-tabs data-behavior="fade" data-nav="left">
+                <nav data-controller>
+                    <button data-tab-action="open" data-open="1">Nested Tab 1</button>
+                    <button data-tab-action="open" data-open="2">Nested Tab 2</button>
+                    <button data-tab-action="open" data-open="3">Nested Tab 3</button>
+
+                    <!--
+                        Load dynamically this tabs into dynamically loaded tabs
+                    -->
+                    <button data-tab-action="open" data-open="4" data-url-refresh data-url="dynamic/dynamic-content-3.html">Dynamic Tabs</button>
+
+                    <button data-tab-action="open" data-open="5">Nested Tab 5</button>
+                </nav>
+                <div data-content>
+                    <div data-tab="1">
+                        <h2>Tab 1</h2>
+                        <p>Content for tab 1</p>
+                    </div>
+                    <div data-tab="2">
+                        <h2>Content 2</h2>
+                        <p>Content for tab 2</p>
+                    </div>
+                    <div data-tab="3">
+                        <h2>3. Lorem ipsum Nesting Max?</h2>
+
+                        <!--
+                            Nested level 2
+                        -->
+                        <div data-yai-tabs data-behavior="fade" data-nav="top">
+                            <nav data-controller data-grow>
+                                <button data-tab-action="open" data-open="1">Nested Max 1?</button>
+                                <button data-tab-action="open" data-open="2">Nested Max Nuh</button>
+                                <button data-tab-action="open" data-open="3">Tab Tab 3</button>
+                            </nav>
+                            <div data-content>
+                                <div data-tab="1">
+                                    <h2>Tab 1</h2>
+                                    <p>Content for tab 1</p>
+                                </div>
+                                <div data-tab="2">
+                                    <h2>HOLY MOLY, IT'S 2!</h2>
+
+                                    <!--
+                                        Nested level 3
+                                    -->
+                                    <div data-yai-tabs data-behavior="fade" data-nav="right">
+                                        <nav data-controller>
+                                            <button data-tab-action="open" data-open="1">Nested Max 1?</button>
+                                            <button data-tab-action="open" data-open="2">Nested Max Nuh</button>
+                                            <button data-tab-action="open" data-open="3">Tab Tab 3</button>
+                                        </nav>
+                                        <div data-content>
+                                            <div data-tab="1">
+                                                <h2>Tab 1</h2>
+                                                <p>Content for tab 1</p>
+                                            </div>
+                                            <div data-tab="2">
+                                                <h2>Content 2</h2>
+                                                <p>Content for tab 2</p>
+                                            </div>
+                                            <div data-tab="3">
+
+                                                <!--
+                                                    Nested level 4
+                                                -->
+                                                <div data-yai-tabs data-behavior="fade" data-nav="bottom">
+                                                    <nav data-controller data-grow>
+                                                        <button data-tab-action="open" data-open="1">4, Tab 1</button>
+                                                        <button data-tab-action="open" data-open="2">4, Tab 2</button>
+                                                        <button data-tab-action="open" data-open="3">Tab 3</button>
+                                                    </nav>
+                                                    <div data-content>
+                                                        <div data-tab="1">
+                                                            <h2>Tab 1</h2>
+                                                            <p>Nested 4 content for tab 1</p>
+                                                        </div>
+                                                        <div data-tab="2">
+                                                            <h2>Content 2</h2>
+                                                            <p>Nested 4 content for tab 2</p>
+                                                        </div>
+                                                        <div data-tab="3">
+                                                            <h2>3. Lorem ipsum dolor sit amet?</h2>
+                                                            <p>Nested 4 content ipsum dolor sit amet!</p>
+                                                        </div>
+                                                    </div>
+                                                </div><!-- / Nested 4 -->
+
+                                            </div>
+                                        </div>
+                                    </div><!-- / Nested 3 -->
+
+                                </div>
+                                <div data-tab="3">
+                                    <h2>3. Lorem ipsum dolor sit amet?</h2>
+                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+                                </div>
+                            </div>
+                        </div><!-- / Nested 2 -->
+
+                    </div>
+                    <div data-tab="4"></div>
+                    <div data-tab="5">
+                        <h2>Tab 5</h2>
+                        <p>Content for tab 5</p>
+                    </div>
+                </div>
+            </div><!-- / Nested 1 -->
+
+        </div>
+    </div>
+</div>
