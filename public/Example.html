@@ -1,0 +1,1254 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tab Browser - YpsilonEventHandler local-dev-many-title</title>
+    <meta name="description" content="Tab Browser">
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAYNJREFUOI2lkz9S20AYxX+7ttOgGDOjQKMZmMEt8lapdQQdISlInRJTcQ5ofAPgBOgG2citMrEnNBpnAgFBgdBuCs8a2TEMjF+1/97b7739VhwWllUgV2I/J1Cu0THWaDc31uhyjc6rBEqLahQmmQzTnlubDNPe46/furSoFwVKiypG2RzZ4ebycrsYZQmS6DmBuBhlycNtsQ6wuafO3YYbP9wW67nWF0A8J2Aln/JUnzqyH6q+EE+HhCD2Q9UH+LAXfi8luoIDAHF4b49zrfcB3r33/nZ2u1+FYfB/XVOLAA3MYDJMe1tKnTRNZT4CtINg3Nzw48cKWmIZHVoNOlc/sjNXKYCsPBn5oeo3fT9qwtGfof7myqujgoNc6wtH3lLqBMMXUevEOE/1aT24WQ6SmU2ATaU+O5tioZXjq5/ZYHZLqARAnmrrMtrY7cYYkrlXqOHM2+lG7SAYL1poB8HY2+lGdfKyCoBpKzcKk0ghFUxbufJk1LrjevHsUoG3YOXf+A/28K0/S+gHCgAAAABJRU5ErkJggg==" />
+
+    <link rel="stylesheet" href="yai-tabs.css">
+    <style>
+        :root {
+            --yai-light-bg: #edededbb;
+            --yai-color: #414549;
+            --yai-box-shadow: 0 2px 4px 1px rgba(0, 0, 0, .2);
+            --yai-font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        }
+
+        *, ::after, ::before { box-sizing: border-box; }
+
+        @media (prefers-reduced-motion:no-preference) {
+            html {
+                scroll-behavior: smooth;
+            }
+        }
+
+        html {
+            text-size-adjust: 100%;
+            text-rendering: optimizeLegibility;
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-font-smoothing: antialiased;
+            -webkit-text-size-adjust: 100%;
+            -webkit-tap-highlight-color: transparent;
+            background: linear-gradient(147deg, #282633 0%, #363a47 100%)
+        }
+        body {
+            margin: 0 auto;
+            padding: 30px 20px;
+            max-width: 1040px;
+            line-height: 1;
+            overflow-y: scroll;
+            font-family: var(--yai-font-family);
+            font-size: 1rem;
+            font-weight: normal;
+            text-align: left;
+            color: var(--yai-color);
+            background-color: var(--yai-light-bg);
+        }
+
+        hr { margin: .75rem 0; }
+        strong { font-weight: bold; color: #555555dd; }
+
+        h1, h2, h3, h4, h5, h6 {
+            margin-top: 0;
+            margin-bottom: 0;
+            font-weight: 500;
+            line-height: 1;
+            font-size: 1.3rem;
+            color: #432124;
+        }
+        h1, h1 a,
+        header h2 {
+            font-size: 1.3rem;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            color: #3c3861;
+            text-decoration: none;
+
+            .ycon {
+                margin-right: 8px;
+            }
+        }
+        header h2 {
+            font-size: 1.15rem;
+            font-weight: normal;
+        }
+        p {
+            margin: 0;
+            font-size: 1.1rem;
+        }
+        button {
+            padding: 8px 12px;
+            cursor: pointer;
+        }
+        strong, b {
+            font-weight: 600;
+        }
+        select:focus {
+            outline: 0;
+            box-shadow: 0 0 4px 1px #8f8e8ee4;
+        }
+        header,
+        main {
+            margin: 0 auto;
+        }
+        header,
+        .box,
+        .section {
+            margin-bottom: 30px;
+            padding: 2rem;
+            background-color: white;
+        }
+        header,
+        .box,
+        .option-switch {
+            box-shadow: var(--yai-box-shadow);
+        }
+        header {
+            margin: 0;
+        }
+        .control-center {
+            margin: 30px 0;
+        }
+        .section {
+            padding: 0;
+
+            &:not(:last-of-type):not(.option-switch) {
+                margin-bottom: 30px;
+            }
+        }
+        .box {
+            line-height: 1.4;
+
+            h2, h3, h4, h5, h6, p, ul, ol, hr {
+                margin-bottom: 16px;
+            }
+            h2 {
+                font-size: 1.1rem;
+            }
+            h3, h4, h5, h6 {
+                font-size: 1.05rem;
+                font-weight: bold;
+            }
+            ul, ol {
+                padding-left: 24px;
+            }
+            p, ul, ol {
+                font-size: 1rem;
+                color: #111;
+            }
+            .mb-0 {
+                margin-bottom: 0;
+            }
+        }
+        .option-switch {
+            margin: -1rem 0 1.5rem;
+            padding: 5px 10px;
+            font-size: 12px;
+
+            select,
+            button {
+                margin-right: 6px;
+                padding: 6px 10px;
+            }
+        }
+        .untouchable {
+            pointer-events: none;
+        }
+        footer {
+            padding: 30px 0;
+            font-size: 14px;
+            text-align:center;
+
+            nav {
+                margin-bottom: .75rem;
+                padding-bottom: .5rem;
+                border-bottom: 1px solid #99999999;
+            }
+            p {
+                font-size: 12px;
+            }
+        }
+
+        #demo-tabs {
+            > [data-content] > [data-tab] > [data-yai-tabs].dynamically-added {
+                max-height: 40vh;
+                overflow: auto;
+                overscroll-behavior: contain;
+
+                [data-tab] {
+                    padding: 8px 1px 3px;
+                    overflow: hidden;
+                }
+            }
+        }
+
+        blockquote {
+            margin: .5rem 1.5rem .5rem 0;
+            padding: .5rem 1rem;
+            border-left: 3px solid #3b75d8;
+            color: #121519;
+
+            small {
+                margin-top: .5rem;
+                display: block;
+                font-size: 14px;
+                color: #515961ee;
+            }
+        }
+
+        .faq-item {
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .full-faq h3 {
+            margin-bottom: 8px;
+            color: #727583;
+        }
+
+        .faq-item [role="contentinfo"] {
+            margin-left: 0;
+            padding: .5rem 1rem;
+            border-left: 4px solid #55586699;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .mb-0 {
+            margin-bottom: 0;
+        }
+        .d-none {
+            display: none;
+        }
+        .space-between {
+            justify-content: space-between;
+        }
+        pre {
+            white-space: pre-wrap;
+        }
+
+        .control-center {
+            padding: 8px;
+            width: 100%;
+            background: #f7f7f7;
+            box-shadow: 0px 2px 6px 1px #2a495f77;
+        }
+        .config-block {
+            width: 100%;
+        }
+        .help {
+            padding: 0 3px 6px 4px;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .config-block label,
+        .config-block .checker {
+            padding: 0 8px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+            font-size: 14px;
+            font-weight: bold;
+            background: #e3e2e2;
+            color: #000;
+            border: 2px solid rgba(165, 163, 163, 0.5);
+            border-width: 2px 0 2px 2px;
+            cursor: pointer;
+        }
+        .config-block .checker {
+            width: 100%;
+            border-right-width: 2px;
+
+            input[type="checkbox"] {
+                margin-left: 6px;
+            }
+        }
+        .control-center button,
+        .config-block select,
+        .config-block input[type="text"],
+        .config-block input[type="number"] {
+            padding: 0 8px;
+            width: 100%;
+            border-radius: 0;
+            background: rgba(255, 255, 255, 1);
+            border: 2px solid rgba(165, 163, 163, 0.5);
+        }
+        .control-center button,
+        .config-block .checker
+        .config-block label,
+        .config-block select,
+        .config-block input[type="text"],
+        .config-block input[type="number"] {
+            min-height: 32px;
+        }
+        .config-block input[type="number"],
+        .config-block select {
+            appearance: none;
+
+            &:focus,
+            &:focus-visible {
+                outline: 3px inset;
+                outline-color: rgba(255, 115, 0, 0.822);
+                outline-offset: -4px;
+            }
+            option {
+                padding: 18px;
+                display: block;
+            }
+        }
+        .set-group,
+        .form-el-box {
+            display: flex;
+            gap: .5rem;
+            position: relative;
+
+            > div { width: 100%; }
+        }
+        .set-group {
+            width: 100%;
+            gap: 0;
+        }
+        .form-el-box.layout-select + .form-el-box {
+            margin-top: .5rem;
+        }
+        .autoswitch-abort-button {
+            display: none;
+        }
+        body.autoswitch-running {
+            .autoswitch-abort-button {
+                margin-right: 4px;
+                display: inline-block;
+                line-height: 1;
+                border-color: inherit;
+                border: 0;
+                color: #ffffff;
+                background: #d00f0f;
+            }
+        }
+
+        /* Ycons */
+        .ycon {
+            display: inline-block;
+            vertical-align: middle;
+            line-height: 1;
+            font-size: 1.25rem;
+            pointer-events: none;
+            user-select: none;
+        }
+        .ycon::before { display: inline-block; }
+        .va-top { vertical-align: baseline; }
+        :root {
+            --ycon-animation-spin: 2s;
+            --ycon-animation-pulse: 2s;
+            --ycon-animation-bounce: 1s;
+        }
+        @media (prefers-reduced-motion: reduce) {
+            :root {
+                --ycon-animation-spin: 0s;
+                --ycon-animation-pulse: 0s;
+                --ycon-animation-bounce: 0s;
+            }
+        }
+        .ycon.mirror { transform: scaleX(-1); }
+        .ycon.flip { transform: scaleY(-1); }
+        .ycon.mirror.flip { transform: scale(-1, -1); }
+        .ycon.rotate-90 { transform: rotate(90deg); }
+        .ycon.rotate-180 { transform: rotate(180deg); }
+        .ycon.rotate-270 { transform: rotate(270deg); }
+        .ycon.gray { filter: grayscale(1); }
+        .ycon.blur { filter: blur(1px); }
+        .ycon.dim { filter: brightness(0.7); }
+        .ycon.bright { filter: brightness(1.3); }
+        .ycon.sepia { filter: sepia(1); }
+        .ycon.invert { filter: invert(1); }
+        .ycon.saturate { filter: saturate(1.5); }
+        .ycon.desaturate { filter: saturate(0.5); }
+        .ycon.spin { animation: ycon-spin var(--ycon-animation-spin) linear infinite; }
+        .ycon.pulse { animation: ycon-pulse var(--ycon-animation-pulse) ease-in-out infinite; }
+        .ycon.bounce { animation: ycon-bounce var(--ycon-animation-bounce) ease-in-out infinite; }
+        @keyframes ycon-spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); }}
+        @keyframes ycon-pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; }}
+        @keyframes ycon-bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+        .ycon-xxs { font-size: 1rem; }
+        .ycon-xs { font-size: 1.25rem; }
+        .ycon-sm { font-size: 1.5rem; }
+        .ycon-md { font-size: 1.75rem; }
+        .ycon-lg { font-size: 2rem; }
+        .ycon-xl { font-size: 2.5rem; }
+        .ycon-xxl { font-size: 3rem; }
+        /* Ycons */
+        .ycon-exclamation-question-mark::before { content: "\2049\FE0F"; } /* ⁉️ */
+        .ycon-check-mark-button::before { content: "\2705"; }              /* ✅ */
+        .ycon-clapping-hands::before { content: "\1F44F"; }                /* 👏 */
+        .ycon-bullseye::before { content: "\1F3AF"; }                      /* 🎯 */
+        .ycon-hundred-points::before { content: "\1F4AF"; }                /* 💯 */
+        .ycon-left-arrow::before { content: "\2190"; }                     /* ← */
+        .ycon-right-arrow::before { content: "\2192"; }                    /* → */
+        .ycon-up-arrow::before { content: "\2191"; }                       /* ↑ */
+        .ycon-down-arrow::before { content: "\2193"; }                     /* ↓ */
+        .ycon-bookmark-tabs::before { content: "\1F4D1"; }                 /* 📑 */
+        .ycon-cyclone::before { content: "\1F300"; }                       /* 🌀 */
+        .ycon-rocket::before { content: "\1F680"; }                        /* 🚀 */
+        .ycon-right-arrow-bold::before { content: "\27A1"; }               /* ➡  */
+        .ycon-right-double-angle::before { content: "\00BB"; }             /* » */
+
+        .highlight-component {
+            padding: 10px;
+
+            h3 {
+                margin-top: 6px;
+                text-align: center;
+            }
+        }
+        ul.greenlight-list {
+            margin-bottom: 0;
+            padding-left: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            line-height: 1;
+            font-size: 95%;
+
+            li {
+                margin: 0 0 1px;
+                padding: 10px;
+                flex-grow: 1;
+                position: relative;
+                list-style: none;
+                background: #eee;
+
+                &:before {
+                    content: "\2705";
+                    position: absolute;
+                }
+                strong {
+                    margin-bottom: 6px;
+                    margin-left: 26px;
+                    display: block;
+                }
+            }
+        }
+
+        /**
+        * Handhelds */
+        @media (max-width: 640px) {
+            body {
+                padding: 30px 10px 0;
+            }
+            .control-center {
+                max-height: 540px;
+                overflow: auto;
+            }
+            .set-group,
+            .form-el-box {
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+        }
+    </style>
+    <style>
+    .hljs{white-space:pre-wrap;line-height: 1.2}
+    .hljs{display:block;overflow-x:auto;padding:.75em;color:#ffffff;background:#1c1b1b}.hljs-subst{color:#ffffff}.hljs-comment{color:#999999}.hljs-keyword,.hljs-selector-tag,.hljs-meta .hljs-keyword,.hljs-doctag,.hljs-section,.hljs-attr,.hljs-meta,.hljs-selector-pseudo,.hljs-selector-class{color:#88aece}.hljs-attribute{color:#c59bc1}.hljs-name,.hljs-type,.hljs-number,.hljs-selector-id,.hljs-quote,.hljs-template-tag,.hljs-built_in,.hljs-title,.hljs-literal{color:#f08d49}.hljs-string,.hljs-regexp,.hljs-symbol,.hljs-variable,.hljs-template-variable,.hljs-link,.hljs-selector-attr,.hljs-meta .hljs-string{color:#b5bd68}.hljs-bullet,.hljs-code{color:#cccccc}.hljs-deletion{color:#de7176}.hljs-addition{color:#76c490}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:bold}
+    </style>
+</head>
+<body class="example-init">
+
+<header>
+    <h1><a href="./Example.html">
+        <span class="ycon ycon-bookmark-tabs ycon-lg gray mirror" aria-hidden="true"></span>
+        YaiTabs 3.1</a>
+    </h1>
+    <hr>
+    <h2>NextGen Tab Browser</h2>
+</header>
+
+<main>
+    <!-- Control center -->
+    <div class="controls">
+        <div class="control-center">
+            <div class="config-block">
+                <div class="form-el-box layout-select">
+                    <!-- Behavior -->
+                    <div class="config-behavior">
+                        <div class="set-group" title="Choose animation effect for tab transitions (applies to all tab components on the page)">
+                            <button class="autoswitch-abort-button"
+                                data-action="abortAutoSwitch">Abort</button>
+                            <label for="behavior">Behavior</label>
+                            <select
+                                id="behavior"
+                                class="switch-tabs-behavior"
+                                data-behavior="true"
+                                data-action="handleConfigs">
+                                <option value="">Select behavior</option>
+                                <option value="fade">fade</option>
+                                <option value="slide-down">slide-down</option>
+                                <option value="slide-up">slide-up</option>
+                                <option value="slide-left">slide-left</option>
+                                <option value="slide-right">slide-right</option>
+                                <option value="blur">blur</option>
+                                <option value="zoom">zoom</option>
+                                <option value="flip">flip</option>
+                                <option value="instant">instant</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- Nav Position -->
+                    <div class="config-position">
+                        <div class="set-group" title="Position navigation buttons relative to content area">
+                            <label for="nav-position">Nav Position</label>
+                            <select
+                                id="nav-position"
+                                class="switch-nav-position"
+                                data-position="true"
+                                data-action="handleConfigs">
+                                <option value="top">top</option>
+                                <option value="left">left</option>
+                                <option value="right">right</option>
+                                <option value="bottom">bottom</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- Nav Alignment -->
+                    <div class="config-alignment">
+                        <div class="set-group" title="Align navigation buttons within their container (start/center/end)">
+                            <label for="nav-alignment">Nav Alignment</label>
+                            <select
+                                id="nav-alignment"
+                                class="switch-nav-alignment"
+                                data-alignment="true"
+                                data-action="handleConfigs">
+                                <option value="start">start || left</option>
+                                <option value="center">center</option>
+                                <option value="end">end || right</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- Expand nav buttons -->
+                    <div class="config-grow set-group" title="Expand navigation buttons to fill all available horizontal space" style="max-width: fit-content;">
+                        <label for="setButtonGrow" class="checker space-between">
+                            Expand Nav
+                            <input type="checkbox" id="setButtonGrow" data-grow="true" data-action="handleConfigs">
+                        </label>
+                    </div>
+                </div>
+                <!-- Switching through all buttons -->
+                <div class="form-el-box">
+                    <div class="config-autoswitch" style="display: flex; gap: .5rem;">
+                        <div class="set-group" title="Automatically cycle through all tabs when demo starts">
+                            <label for="switchBehavior" class="checker space-between">
+                                Auto Cycle Tabs
+                                <input type="checkbox" id="switchBehavior" name="switchBehaviorTriggerAll" checked>
+                            </label>
+                        </div>
+                        <div class="set-group" title="After completing current behavior, automatically demo all remaining behaviors">
+                            <label for="switchBehaviorLoopAll" class="checker space-between">
+                                Cycle Behaviors
+                                <input type="checkbox" id="switchBehaviorLoopAll" name="switchBehaviorLoopAll">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="config-autoswitch" style="display: flex; gap: .5rem;">
+                        <div class="config-auto-timeout set-group" title="Delay between tab switches and behavior transitions">
+                            <label for="autoswitchTimeout">Delay</label>
+                            <input id="autoswitchTimeout" type="number" min="750" max="15000" step="50" value="750">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- First Example
+        Standard Tabs markup -->
+    <div class="section section-tabs">
+        <div id="demo-tabs" data-yai-tabs data-behavior="slide-up" data-nav="top">
+
+            <nav data-controller data-align="start" aria-label="Special Demo Tabs">
+                <button data-tab-action="open" data-open="1" data-default>Tab 1</button>
+                <button data-tab-action="open" data-open="2">Tab 2</button>
+                <button data-tab-action="open" data-open="3">Tab 3</button>
+                <button data-tab-action="open" data-open="4" data-url-refresh data-url="dynamic/dynamic-content-1.html">Dynamic 1</button>
+                <button data-tab-action="open" data-open="5" data-url-refresh data-url="dynamic/dynamic-content-2.html">Dynamic 2</button>
+                <button data-tab-action="open" data-open="6" data-url-refresh data-url="dynamic/dynamic-content-3.html">Dynamic Tabs</button>
+            </nav>
+
+            <div data-content>
+                <div data-tab="1">
+                    <h2>Ynception Unlocked</h2>
+                    <hr>
+                    <p>Click "<b>Dynamic Tabs</b>" <span class="ycon ycon-right-double-angle ycon-sm invert" aria-hidden="true"></span> "<b>Tab 3</b>" repeatedly to test Ynfynyty. Most frameworks crash after 2-3 levels. YaiTabs just keeps going. Only limit is max-width in <code>&lt;body&gt;</code>.</p>
+                </div>
+                <div data-tab="2">
+                    <h2>YaiTabs 3.1</h2>
+                    <hr>
+                    <p>Follows WAI-ARIA Authoring Practices</p>
+                </div>
+                <div data-tab="3">
+                    <h2>3. Lorem ipsum dolor sit amet!</h2>
+                    <hr>
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+                </div>
+                <!-- Dynamic content will be loaded here -->
+                <div data-tab="4"></div>
+                <div data-tab="5"></div>
+                <div data-tab="6"></div>
+            </div>
+
+        </div>
+        <div id="copy-tabs-to-tabs" class="box" style="display: none; position: relative; box-shadow:0 0px 12px 1px rgb(177 17 17 / 90%)">
+            <h3>🚀 Revolutionary Architecture: Zero Event Listener Proliferation</h3>
+            <hr>
+            <p><strong>YpsilonEventHandler's DOM Event Scoping System</strong> enables infinite nesting with <strong>just ONE listener</strong> per container. No matter how deep you nest tabs, each container maintains its own event scope with perfect isolation.</p>
+            <p><strong>Performance Impact:</strong> Traditional implementations would create N×M listeners for nested components. YaiTabs 3.0 creates exactly <strong>1 listener per root container</strong> - achieving O(1) memory complexity regardless of nesting depth.</p>
+            <p class="mb-0"><strong>Copy Function Note:</strong> This demo copy function is rudimentary - it clones DOM without regenerating ARIA IDs. For production, nested components would need proper accessibility initialization to maintain unique IDs and full keyboard navigation.</p>
+        </div>
+    </div>
+
+    <!-- Second example
+        Extended Tabs markup -->
+    <div class="section section-tabs">
+        <div
+            data-yai-tabs
+            data-behavior="fade"
+            data-history-mode="replace"
+            data-ref-path="main-tabs">
+
+            <nav data-controller data-align="left">
+                <button data-tab-action="open" data-open="1">Overview</button>
+                <button data-tab-action="open" data-open="2">Performance</button>
+                <button data-tab-action="open" data-open="3">Accessibility & Nesting</button>
+            </nav>
+
+            <div data-content>
+                <!-- MAIN TAB 1 -->
+                <div data-tab="1">
+                    <h2>YaiTabs: Quick Overview</h2>
+                    <p>YaiTabs is a lightweight, accessible tab component with URL state, deep nesting, and a single-listener event model.</p>
+                    <hr>
+                    <h3>Highlights</h3>
+                    <ul>
+                    <li><strong>URL State:</strong> Deep-link to any tab (even nested) and restore state on reload.</li>
+                    <li><strong>APG-compliant:</strong> Correct roles, relationships, keyboard model, and roving <code>tabindex</code>.</li>
+                    <li><strong>Single Listener:</strong> Each container uses one delegated handler—great for performance.</li>
+                    <li><strong>Dynamic Content:</strong> Optional <code>aria-busy</code> + <code>aria-live</code> for async loads.</li>
+                    </ul>
+                    <h3 class="mt-2">Basic Markup</h3>
+<pre class="hljs">
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">data-yai-tabs</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">data-controller</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">data-tab-action</span>=<span class="hljs-string">&quot;open&quot;</span> <span class="hljs-attr">data-open</span>=<span class="hljs-string">&quot;1&quot;</span>&gt;</span>Tab A<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">data-tab-action</span>=<span class="hljs-string">&quot;open&quot;</span> <span class="hljs-attr">data-open</span>=<span class="hljs-string">&quot;2&quot;</span>&gt;</span>Tab B<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">data-content</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">data-tab</span>=<span class="hljs-string">&quot;1&quot;</span>&gt;</span>A content…<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">data-tab</span>=<span class="hljs-string">&quot;2&quot;</span>&gt;</span>B content…<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</pre>
+                    <p class="mb-0"><small>Tip: Use a unique <code>data-ref-path</code> per container to get clean hash params.</small></p>
+                </div>
+
+                <!-- MAIN TAB 2 -->
+                <div data-tab="2">
+                    <h2>Performance Cheatsheet</h2>
+                    <p>Designed for large pages and many nested instances.</p>
+                    <hr>
+                    <h3>Why it’s fast</h3>
+                    <ol>
+                    <li><strong>Delegated Events:</strong> 1 listener per container; no N×M explosion with nesting.</li>
+                    <li><strong>DOM Distance Cache:</strong> Resolves closest targets efficiently inside containers.</li>
+                    <li><strong>Idempotent Init:</strong> Prevents re-IDing and duplicate listeners.</li>
+                    </ol>
+                    <h3>Practical Tips</h3>
+                    <ul>
+                    <li>Prefer <code>data-history-mode="replace"</code> to avoid bloating browser history on rapid tabbing.</li>
+                    <li>For async loads, enable content cache if your UX benefits from instant back-navigation.</li>
+                    <li>Use <code>prefers-reduced-motion</code> CSS gate for transitions on low-motion users.</li>
+                    </ul>
+                    <blockquote>
+                    “One listener per container keeps memory flat and GC friendly—even with 4+ levels of nested tabs.”
+                    <small>Architecture Note</small>
+                    </blockquote>
+                </div>
+
+                <!-- MAIN TAB 3 -->
+                <div data-tab="3">
+                    <h2>Accessibility & Nested Examples</h2>
+                    <p>The example below demonstrates three nested containers with different nav positions. Hash state still resolves the exact open tab at each level.</p>
+
+                    <!-- Nested level 1 -->
+                    <div
+                        data-yai-tabs
+                        data-behavior="fade"
+                        data-nav="left"
+                        data-ref-path="lvl-1-tabs"
+                        style="margin-top:1rem">
+
+                        <nav data-controller>
+                            <button data-tab-action="open" data-open="1">A11y Basics</button>
+                            <button data-tab-action="open" data-open="2">Keyboard Model</button>
+                            <button data-tab-action="open" data-open="3">Deep Nesting</button>
+                        </nav>
+
+                        <div data-content>
+                            <!-- L1 TAB 1 -->
+                            <div data-tab="1">
+                                <h3>A11y Basics</h3>
+                                <ul>
+                                    <li><code>role="tablist"</code> on the <code>nav</code>, <code>role="tab"</code> on buttons, <code>role="tabpanel"</code> on panels.</li>
+                                    <li>Each tab button has <code>aria-controls</code> and each panel <code>aria-labelledby</code>.</li>
+                                    <li>Inactive panels use <code>aria-hidden="true"</code> and <code>tabindex="-1"</code>.</li>
+                                </ul>
+                            </div>
+
+                            <!-- L1 TAB 2 -->
+                            <div data-tab="2">
+                                <h3>Keyboard Model</h3>
+                                <p>Compliant with the WAI-ARIA Authoring Practices:</p>
+                                <ul>
+                                    <li><strong>Arrows</strong> move focus among tab buttons (horizontal vs. vertical respected).</li>
+                                    <li><strong>Enter/Space</strong> activates and may move focus into the panel (configurable).</li>
+                                    <li><strong>Home/End</strong> go to first/last tab; <strong>Esc</strong> bubbles to parent container.</li>
+                                </ul>
+                                <p class="mb-0"><small>Set <code>aria-orientation</code> based on computed layout for robustness.</small></p>
+                            </div>
+
+                            <!-- L1 TAB 3 -->
+                            <div data-tab="3">
+                                <h3>Deep Nesting Demo</h3>
+                                <p>Below we nest a top-nav inside a left-nav, and then a right-nav inside that. Hash params like <code>#main-tabs=3&lvl-1-tabs=3&lvl-2-tabs=2&lvl-3-tabs=1</code> will restore all levels.</p>
+
+                                <!-- Nested level 2 -->
+                                <div
+                                    data-yai-tabs
+                                    data-behavior="fade"
+                                    data-nav="top"
+                                    data-ref-path="lvl-2-tabs"
+                                    style="margin-top:.75rem">
+
+                                    <nav data-controller data-grow>
+                                        <button data-tab-action="open" data-open="1">Animations</button>
+                                        <button data-tab-action="open" data-open="2">URL State</button>
+                                        <button data-tab-action="open" data-open="3">Reduced Motion</button>
+                                    </nav>
+
+                                    <div data-content>
+                                        <!-- L2 TAB 1 -->
+                                        <div data-tab="1">
+                                            <h4>Animations</h4>
+                                            <p>Switch between <code>fade</code>, <code>slide-*</code>, <code>zoom</code>, or <code>flip</code> via <code>data-behavior</code>. Keep transitions short (150–300ms) for snappy feel.</p>
+                                            <p class="mb-0"><small>For content that shifts layout, consider overflow gating to avoid jank.</small></p>
+                                        </div>
+
+                                        <!-- L2 TAB 2 -->
+                                        <div data-tab="2">
+                                            <h4>URL State & Deep Links</h4>
+                                            <ul>
+                                            <li>Each container uses a unique <code>data-ref-path</code> key.</li>
+                                            <li>On open, the route map updates and writes to the hash.</li>
+                                            <li>On <code>hashchange</code>, containers reconcile their state (no loops: guarded writes).</li>
+                                            </ul>
+                                            <p class="mb-0"><small>Use <code>data-history-mode="replace"</code> to keep Back-stack clean on frequent tabbing.</small></p>
+
+                                            <!-- Nested level 3 -->
+                                            <div
+                                                data-yai-tabs
+                                                data-behavior="fade"
+                                                data-nav="right"
+                                                data-ref-path="lvl-3-tabs"
+                                                style="margin-top:.75rem">
+
+                                                <nav data-controller>
+                                                    <button data-tab-action="open" data-open="1">API Basics</button>
+                                                    <button data-tab-action="open" data-open="2">Async Content</button>
+                                                    <button data-tab-action="open" data-open="3">Troubleshooting</button>
+                                                </nav>
+
+                                                <div data-content>
+                                                    <!-- L3 TAB 1 -->
+                                                    <div data-tab="1">
+                                                        <h5>API Basics</h5>
+                                                        <ul>
+                                                            <li><code>data-default</code> marks the initial tab.</li>
+                                                            <li><code>data-open</code> sets the target panel ID.</li>
+                                                            <li><code>data-nav</code> controls nav position: <em>top/bottom/left/right</em>.</li>
+                                                        </ul>
+                                                        <p class="mb-0"><small>Initialize only once per container; the component is idempotent by design.</small></p>
+                                                    </div>
+
+                                                    <!-- L3 TAB 2 -->
+                                                    <div data-tab="2">
+                                                        <h5>Async Content</h5>
+                                                        <p>When loading remote HTML:</p>
+                                                        <ul>
+                                                            <li>Set <code>aria-busy="true"</code> before fetch; reset to <code>false</code> after.</li>
+                                                            <li>Optionally set <code>aria-live="polite"</code> for subtle SR announcements.</li>
+                                                            <li>Re-run accessibility setup on nested content if it includes new tab containers.</li>
+                                                        </ul>
+                                                        <p class="mb-0"><small>Consider caching for quick back-navigation.</small></p>
+                                                    </div>
+
+                                                    <!-- L3 TAB 3 -->
+                                                    <div data-tab="3">
+                                                        <h5>Troubleshooting</h5>
+                                                        <ul>
+                                                            <li>Duplicate listeners? Ensure only one init per container file & no legacy helpers.</li>
+                                                            <li>Stale hash? Remove the key when closing a tab or fallback to default.</li>
+                                                            <li>Focus lost? Keep one <code>tabindex="0"</code> per tablist (roving tabindex).</li>
+                                                        </ul>
+                                                        <!-- Nested level 4 -->
+                                                        <div
+                                                            data-yai-tabs
+                                                            data-behavior="fade"
+                                                            data-nav="bottom"
+                                                            data-ref-path="lvl-4-tabs"
+                                                            style="margin-top:.75rem">
+
+                                                            <nav data-controller data-grow>
+                                                                <button data-tab-action="open" data-open="1">Checklists</button>
+                                                                <button data-tab-action="open" data-open="2">Design Notes</button>
+                                                                <button data-tab-action="open" data-open="3">Changelog</button>
+                                                            </nav>
+
+                                                            <div data-content>
+                                                                <div data-tab="1">
+                                                                    <h6>Pre-Ship Checklist</h6>
+                                                                    <ul>
+                                                                        <li>Unique <code>data-ref-path</code> per container</li>
+                                                                        <li>Visible <code>:focus-visible</code> ring for all interactive elements</li>
+                                                                        <li><code>aria-orientation</code> consistent with computed layout</li>
+                                                                        <li>Reduced-motion guard on heavy transitions</li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div data-tab="2">
+                                                                    <h6>Design Notes</h6>
+                                                                    <ul>
+                                                                        <li>Prefer subtle elevation for active tabs and maintain a consistent hit-area (min-height ~40px).</li>
+                                                                        <li>Use semantic color tokens for easy theming.</li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div data-tab="3">
+                                                                    <h6>Changelog (Excerpt)</h6>
+                                                                    <ul>
+                                                                        <li><strong>3.1:</strong> URL state for nested tabs; orientation via computed layout.</li>
+                                                                        <li><strong>3.0:</strong> Single-listener event model; idempotent accessibility setup.</li>
+                                                                        <li><strong>2.x:</strong> Roving tabindex + APG keyboard model.</li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- / Nested 4 -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- / Nested 3 -->
+                                        </div>
+
+                                        <!-- L2 TAB 3 -->
+                                        <div data-tab="3">
+                                            <h4>Reduced Motion</h4>
+                                            <p>Respect user preferences with a simple CSS gate:</p>
+<pre class="hljs">
+<span class="hljs-keyword">@media</span> (<span class="hljs-attribute">prefers-reduced-motion</span>: reduce) {
+    <span class="hljs-selector-attr">[data-yai-tabs]</span> <span class="hljs-selector-attr">[data-tab]</span> {
+        <span class="hljs-attribute">transition</span>: none;
+        <span class="hljs-attribute">animation</span>: none;
+    }
+}</pre>
+                                            <p class="mb-0"><small>Keep parity in UX by retaining visual state changes without movement.</small></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- / Nested 2 -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- / Nested 1 -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--
+        Aria notes -->
+    <div class="box">
+        <h2>
+            <span class="ycon ycon-bullseye ycon-md" aria-hidden="true"></span>
+            ARIA Accessibility Summary
+        </h2>
+        <hr>
+        <p><strong>YaiTabs</strong> implements <strong>WCAG 2.1 AA compliant</strong> tab navigation with full screen reader support.</p>
+        <hr>
+        <h3>Implemented Features:</h3>
+        <ul>
+            <li><strong>Proper ARIA roles:</strong> <code>tablist</code>, <code>tab</code>, <code>tabpanel</code></li>
+            <li><strong>State management:</strong> <code>aria-selected</code>, <code>hidden</code>, <code>tabindex</code></li>
+            <li><strong>Relationships:</strong> <code>aria-controls</code>, <code>aria-labelledby</code></li>
+            <li><strong>Keyboard navigation:</strong> Arrow keys, Home/End, Enter/Space</li>
+            <li><strong>Focus management:</strong> Automatic panel focus on keyboard activation</li>
+            <li><strong>Unique IDs:</strong> Container-scoped to prevent collisions</li>
+            <li><strong>Auto-labeling:</strong> <code>aria-label="Tab navigation"</code> on tablists</li>
+        </ul>
+        <hr>
+        <p class="mb-0"><strong>DeepSeek AI Review:</strong> <em>"100% correct and follows WAI-ARIA Authoring Practices perfectly. This is exactly how ARIA should be implemented for tab interfaces.
+        <span class="ycon ycon-clapping-hands ycon-xxs" aria-hidden="true"></span>"</em></p>
+    </div>
+
+    <!--
+        Spacefiller -->
+    <div class="box highlight-component">
+        <h3>
+            <span class="ycon ycon-rocket ycon-xs mirror" aria-hidden="true"></span>
+            YaiTabs - Modern Tab Component
+            <span class="ycon ycon-rocket ycon-xs" aria-hidden="true"></span>
+        </h3>
+        <ul class="greenlight-list">
+            <li><strong>O(1) Performance</strong> - Single listener per container</li>
+            <li><strong>Hash Routing</strong> - URL state management</li>
+            <li><strong>Infinite Nesting</strong> - Tabs within tabs within tabs</li>
+            <li><strong>Perfect Accessibility</strong> - 100/100 Lighthouse score</li>
+            <li><strong>8 Animation Behaviors</strong> - Fade, slide, zoom, flip & more</li>
+            <li><strong><small>Yai</small></strong><small>~1,500 LOC VanillaJS</small></li>
+        </ul>
+    </div>
+
+    <!--
+        FAQ Section with ARIA roles -->
+    <div class="box full-faq">
+        <h2>
+            <span class="ycon ycon-exclamation-question-mark pulse" aria-hidden="true"></span>
+            Keyboard Navigation FAQ
+        </h2>
+        <hr>
+        <div class="faq-item" role="article">
+            <h3 role="heading" aria-level="3">Why does TAB skip some tab buttons?</h3>
+            <div role="contentinfo">
+                <p class="mb-0">This is the <strong>correct WAI-ARIA behavior</strong>! Only the <em>active</em>
+                tab button is in the TAB order. Use <strong>Arrow keys</strong> to navigate
+                between tabs within a container.</p>
+            </div>
+        </div>
+        <div class="faq-item" role="article">
+            <h3 role="heading" aria-level="3">What's the proper keyboard navigation pattern?</h3>
+            <div role="contentinfo">
+                <p>Follow the <strong>WAI-ARIA Authoring Practices</strong>:</p>
+                <ul class="mb-0">
+                    <li><strong>TAB</strong> - Move between tab containers and content areas</li>
+                    <li>
+                        <span><!-- ← → ↑ ↓ -->
+                            <strong class="ycon ycon-left-arrow ycon-xs va-top" role="img" aria-label="left arrow"></strong>
+                            <strong class="ycon ycon-right-arrow ycon-xs va-top" role="img" aria-label="right arrow"></strong>
+                            <strong class="ycon ycon-up-arrow ycon-xs va-top" role="img" aria-label="up arrow"></strong>
+                            <strong class="ycon ycon-down-arrow ycon-xs va-top" role="img" aria-label="down arrow"></strong>
+                        </span> - Navigate between tabs within a container
+                    </li>
+                    <li><strong>Enter/Space</strong> - Activate/deactivate the focused tab</li>
+                    <li><strong>Home/End</strong> - Jump to first/last tab in container</li>
+                </ul>
+            </div>
+        </div>
+        <div class="faq-item" role="article">
+            <h3 role="heading" aria-level="3">How do I navigate nested tabs?</h3>
+            <div role="contentinfo">
+                <p>Each tab container is independent:</p>
+                <ol class="mb-0">
+                    <li><strong>TAB</strong> to focus the main tab container</li>
+                    <li><strong>Arrow keys</strong> to select different main tabs</li>
+                    <li><strong>TAB</strong> again to enter the tab content</li>
+                    <li><strong>TAB</strong> once more to reach nested tab container</li>
+                    <li><strong>Arrow keys</strong> to navigate nested tabs</li>
+                </ol>
+            </div>
+        </div>
+        <div class="faq-item" role="article">
+            <h3 role="heading" aria-level="3">Why can't I TAB into hidden tab content?</h3>
+            <div role="contentinfo">
+                <p class="mb-0">Hidden tab panels have <code>aria-hidden="true"</code> and <code>tabindex="-1"</code>
+                to prevent focus on inaccessible content. This ensures screen reader users
+                don't get trapped in hidden content.</p>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<footer>
+    <nav>
+        <a href="https://github.com/eypsilon/YpsilonEventHandler">GitHub</a>
+    </nav>
+    <p>
+        <b>© <span title="DOM pun intended">Claude Van DOM</span> &amp; Engin Ypsilon</b>
+    </p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/ypsilon-event-handler@latest/ypsilon-event-handler.min.js"></script>
+<!-- <script src="../shared/test/autoswitch.js"></script> -->
+<script src="autoswitch.js"></script>
+<script src="yai-base.js"></script>
+<script src="yai-tabs.js"></script>
+
+<script>
+    /**
+     * Init YaiTabs
+     */
+    const tabs = new YaiTabs({
+        closable: true,
+        openDefault: 50,
+        autoAccessibility: true,
+        autoFocus: false,
+
+        events: {
+            enableStats: true,
+            autoTargetResolution: true,
+            actionableAttributes: ['data-tab-action'],
+            actionableTags: ['button'],
+        }
+    });
+
+    // Lazy nested components, just set all nesting components
+    // `data-yai-tabs-lazy` instead `data-yai-tabs`
+    // and activate them after init. The root component gets 1 listener
+    // added, nested components immediately use that listener. That's
+    // default behavior for dynamic content.
+    // document.body.querySelectorAll('[data-yai-tabs-lazy]').forEach((lazyComponent) => {
+    //     lazyComponent.dataset.yaiTabs = true;
+    // })
+
+    /**
+     * EventHandler for this Example
+     */
+    class ExampleHandler extends YpsilonEventHandler {
+        constructor() {
+            super({ body: ['click', 'change'] }, {}, {
+                autoTargetResolution: true,
+                enableConfigValidation:  true,
+                enableHandlerValidation: true,
+            }); // this.on('yai.tabs', 'handleTabDispatched');
+
+            this.isProcessing = false;
+            this.currentAutoSwitch = null;
+
+            // Prefetch elements
+            this.getControlCenter = document.querySelector('.control-center')
+            this.cycleAll =  document.querySelector('[name="switchBehaviorTriggerAll"]')
+            this.loopAll = document.querySelector('[name="switchBehaviorLoopAll"]')
+        }
+
+        handleTabDispatched(event, target) {
+            if (event.detail.type === 'openTab') {
+                console.log(`${event.detail.type}: ID ${event.detail.container.id}, Tab ${event.detail.id}`, event.detail);
+            }
+        }
+
+        handleClick(event, target, container) {
+            const action = target.dataset.action;
+            if (action) {
+                // Try direct method first
+                if (typeof this[action] === 'function') {
+                    return this[action](target, event, container);
+                }
+                // If handler not found, try resolving aliases
+                const aliasHandler = this.events.resolveMethodName(action, event.type);
+                if (aliasHandler && typeof this[aliasHandler] === 'function') {
+                    return this[aliasHandler](target, event, container);
+                }
+            }
+        }
+
+        handleChange(event, target) {
+            if (target === this.cycleAll) {
+                if (!this.cycleAll.checked) {
+                    this.loopAll.checked = false;
+                }
+            }
+            if (target === this.loopAll) {
+                if (this.loopAll.checked && !this.cycleAll.checked) {
+                    this.cycleAll.checked = true;
+                }
+            }
+
+            const action = target.dataset.action;
+            if (action && this[action]) this[action](target, event);
+        }
+
+        abortAutoSwitch(target, event) {
+            console.log(target)
+            if (this.currentAutoSwitch) {
+                this.currentAutoSwitch.abort();
+                this.currentAutoSwitch = null;
+                this.isProcessing = false;
+
+                document.querySelectorAll('.switch-tabs-behavior').forEach(btn => {
+                    btn.disabled = false;
+                });
+            }
+        }
+
+        handleConfigs(target, event) {
+            if (event.type !== 'change' || this.isProcessing) return;
+
+            const setGrow = target.dataset.grow;
+            const setBehavior = target.dataset.behavior;
+            const setPosition = target.dataset.position;
+            const setAlignment = target.dataset.alignment;
+            const getTabsContainer = document.getElementById('demo-tabs');
+
+            if (setGrow) {
+                const getTabsController = document.querySelector('#demo-tabs > [data-controller]');
+
+                if (target.checked) {
+                    getTabsController.dataset.grow = true;
+                } else {
+                    getTabsController.removeAttribute('data-grow');
+                }
+            }
+            else if (setBehavior) {
+                let setTimeout = 1000;
+                let getUserTimeout = document.getElementById('autoswitchTimeout')?.value;
+                if (getUserTimeout) {
+                    getUserTimeout = parseInt(getUserTimeout, 10);
+                    if (getUserTimeout >= 750) {
+                        setTimeout = getUserTimeout;
+                    }
+                }
+                const behaviorConfig = {
+                    target: '#demo-tabs',
+                    triggerSelector: 'nav[data-controller] button[data-tab-action]',
+                    timeout: setTimeout,
+                    initialTimeout: 750,
+                };
+                const behavior = target.value;
+
+                if (this.cycleAll.checked && behavior) {
+                    getTabsContainer.dataset.behavior = behavior;
+                    this.isProcessing = true;
+                    target.disabled = true;
+
+                    this.currentAutoSwitch = new AutoSwitch(behaviorConfig)
+                        .on('cycleInit', () => {
+                            getTabsContainer.dataset.behavior = behavior;
+                        })
+                        .on('afterLast', (context) => {
+                            // Only proceed to next behavior if "Through All" is checked
+                            if (this.loopAll.checked) {
+                                // Check if there's a next behavior to demo
+                                const behaviorSelect = document.querySelector('.switch-tabs-behavior');
+                                const currentIndex = behaviorSelect.selectedIndex;
+                                const nextIndex = currentIndex + 1;
+
+                                if (nextIndex < behaviorSelect.options.length) {
+                                    // Wait before triggering next behavior
+                                    window.setTimeout(() => {
+                                        this.isProcessing = false; // Reset processing state
+                                        behaviorSelect.disabled = false; // Re-enable select
+                                        behaviorSelect.selectedIndex = nextIndex;
+                                        behaviorSelect.dispatchEvent(new Event('change', { bubbles: true, cancelable: false }));
+                                    }, getUserTimeout);
+                                } else {
+                                    // All behaviors done
+                                    this.isProcessing = false;
+                                    target.disabled = false;
+                                    target.focus();
+                                    this.currentAutoSwitch = null; // Clear reference when done
+                                }
+                            } else {
+                                // Just finish current behavior demo, don't loop to next
+                                this.isProcessing = false;
+                                target.disabled = false;
+                                target.focus();
+                                this.currentAutoSwitch = null; // Clear reference when done
+                            }
+                        })
+                        .on('beforeStop', () => {
+                            this.currentAutoSwitch = null; // Clear reference on manual stop
+                        });
+
+                    this.currentAutoSwitch.cycle();
+                }
+                else if (behavior) { // Just change behavior without demo
+                    getTabsContainer.dataset.behavior = behavior;
+                }
+
+                const getAllTabComponents = document.querySelectorAll(`div[data-behavior]:not([data-behavior="${behavior}"])`);
+                if (getAllTabComponents.length) {
+                    getAllTabComponents.forEach((component) => {
+                        component.dataset.behavior = behavior;
+                    });
+                }
+            }
+            else if (target.value) {
+                if (setPosition) {
+                    if (getTabsContainer) {
+                        getTabsContainer.dataset.nav = target.value;
+                    }
+                }
+                else if (setAlignment) {
+                    const getTabsController = document.querySelector('#demo-tabs > [data-controller]');
+                    getTabsController.dataset.align = target.value;
+                }
+            }
+        }
+
+        copyTabsIntoTabs(target, event) {
+            const countNestingEl = document.getElementById('count-nesting');
+            let counterNesting;
+
+            if (!window.getTabsContainerWrapper) {
+                counterNesting = 0;
+                window.getTabsContainerWrapper = document.getElementById('demo-tabs').cloneNode(true);
+                getTabsContainerWrapper = window.getTabsContainerWrapper;
+            }
+
+            if (getTabsContainerWrapper) {
+                let getTabsContainer = getTabsContainerWrapper;
+                getTabsContainer.removeAttribute('id');
+                getTabsContainer.classList.add('dynamically-added');
+
+                const getDemoElement = document.getElementById('demo-tabs');
+                const getTargetEl = getDemoElement.querySelectorAll('.tab-active div.active[data-tab]');
+
+                if (getDemoElement && getTargetEl[getTargetEl.length-1]) {
+                    getTargetEl[getTargetEl.length-1].insertAdjacentHTML('beforeend', getTabsContainer.outerHTML)
+
+                    if (countNestingEl.textContent) {
+                        countNestingEl.textContent = parseInt(countNestingEl.textContent, 10) + 1;
+                    } else {
+                        countNestingEl.textContent = 1;
+                        countNestingEl.before('Nested: ');
+                    }
+
+                    if (countNestingEl.textContent === '1' && getDemoElement) {
+                        const getCopyTabsToTabsInfo = document.getElementById('copy-tabs-to-tabs');
+                        if (getCopyTabsToTabsInfo) {
+                            getCopyTabsToTabsInfo.style.display = 'block';
+                        }
+                    }
+                } else {
+                    window.getTabsContainerWrapper = null;
+                }
+            }
+        }
+    }
+
+    // Example helper
+    const exampleHandler = new ExampleHandler();
+</script>
+</body>
+</html>
