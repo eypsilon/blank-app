@@ -1,0 +1,68 @@
+{
+  "manifestVersion": "1.0.0",
+  "version": "1.0.0",
+  "name": {
+    "short": "Hello World",
+    "full": "The official Hello World app for Demo"
+  },
+  "description": {
+    "short": "Lorem ipsum.",
+    "full": "Minions ipsum gelatooo uuuhhh para tú bappleees para tú tank yuuu! Gelatooo po kass. Bappleees poopayee tulaliloo pepete belloo! Wiiiii."
+  },
+  "defaultLocale": "de-DE",
+  "locales": {
+    "de-DE": {
+      "key1": "abc"
+    },
+    "en": {
+      "key1": "abc"
+    }
+  },
+  "icon": {
+    "light": "https://i.ibb.co/RkWVbTsG/CODE-LEAP-logo-1024sq-Bach-Tung-Vu.png",
+    "dark": "https://i.ibb.co/RkWVbTsG/CODE-LEAP-logo-1024sq-Bach-Tung-Vu.png"
+  },
+  "communication": {
+    "supportUrl": "https://example.com/support-for-app-xy/__ACTIVE_LOCALE__/",
+    "guideUrl": "https://example.com/guide-for-app-xy?lang=__ACTIVE_LOCALE__"
+  },
+  "legal": {
+    "gdprRequestUrl": "https://example.com/gdpr/request",
+    "gdprDeleteUrl": "https://example.com/gdpr/delete",
+    "privacyUrl": "https://example.com/privacy",
+    "termsOfUseUrl": "https://example.com/terms-of-use"
+  },
+  "lifecycle": {
+    "setupUrl": "http://localhost:50142/setup",
+    "connectUrl": "https://jtl.integrations.example.com/lifecycle/connect",
+    "disconnectUrl": "https://jtl.integrations.example.com/lifecycle/disconnect"
+  },
+  "capabilities": {
+    "hub": {
+      "appLauncher": {
+        "redirectUrl": "http://localhost:50142/erp",
+        "closedPreviewUrl": "http://localhost:50142/closed-preview"
+      }
+    },
+    "erp": {
+      "headless": {
+        "url": "https://jtl.integrations.example.com/erp"
+      },
+      "menuItems": [
+        {
+          "id": "<MENU ITEM ID>",
+          "name": "ERP Menu Item",
+          "url": "http://localhost:50142/erp"
+        }
+      ],
+      "pane": [
+        {
+          "url": "http://localhost:50142/pane",
+          "title": "Test Pane",
+          "context": "customers",
+          "matchChildContext": true
+        }
+      ]
+    }
+  }
+}

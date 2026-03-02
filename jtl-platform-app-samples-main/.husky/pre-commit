@@ -1,0 +1,17 @@
+yarn format:check
+
+# Check for changes in src/sdk/js-core
+if git diff --cached --name-only | grep -q '^src/sdk/js-core/'; then
+  echo "Linting files in src/sdk/js-core..."
+  yarn --cwd src/sdk/js-core lint
+else
+  echo "No changes in src/sdk/js-core. Skipping lint."
+fi
+
+# Check for changes in src/sdk/js-core
+if git diff --cached --name-only | grep -q '^src/sdk/js-react-internal/'; then
+  echo "Linting files in src/sdk/js-react-internal..."
+  yarn --cwd src/sdk/js-react-internal lint
+else
+  echo "No changes in src/sdk/js-react-internal. Skipping lint."
+fi

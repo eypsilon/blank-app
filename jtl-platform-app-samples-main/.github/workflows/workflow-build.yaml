@@ -1,0 +1,30 @@
+name: Build Samples
+
+on:
+  workflow_call:
+
+jobs:
+  Hello-World-APP:
+    name: Hello World App
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'yarn'
+
+      - name: Install dependencies
+        working-directory: src/hello-world-app
+        run: yarn install
+
+      - name: Build Hello World App
+        working-directory: src/hello-world-app
+        run: yarn build
+
+      - name: Test Hello World App
+        working-directory: src/hello-world-app
+        run: yarn test
