@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Speedtab News &amp; Tips</title>
+    <link>https://5elementsdesign.github.io/Speedtab/</link>
+    <atom:link href="https://example.github.io/speedtab-news/speedtab-news.xml" rel="self" type="application/rss+xml" />
+    <description>Updates, tutorials, and tips from Speedtab — the ultra-fast, local-first New Tab workspace.</description>
+    <language>en</language>
+    <lastBuildDate>Wed, 23 Sep 2026 00:00:00 GMT</lastBuildDate>
+    <generator>Hand-crafted with YAI</generator>
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- ITEM 1 — Welcome (YaiTabs flex)                                -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <item>
+      <title>👋 Welcome to the Feed Module</title>
+      <link>https://5elementsdesign.github.io/Speedtab/docs/feeds</link>
+      <guid isPermaLink="false">speedtab-news-welcome</guid>
+      <pubDate>Wed, 23 Sep 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[
+        <p data-st-bg-color="var(--st-color-primary)"
+           data-st-color="var(--st-color-primary-contrast)"
+           data-st-padding="12px 16px"
+           data-st-border-radius="6px"
+           data-st-margin-bottom="12px">
+          👋 <b>Welcome!</b> You're looking at Speedtab's own feed source — a demonstration of what's possible with the RSS module.
+        </p>
+
+        <div data-yai-tabs data-theme="default" data-color-accent="primary" data-auto-accessibility="false">
+          <nav data-controller>
+            <button data-tab-action="open" data-open="1" data-default>What is this?</button>
+            <button data-tab-action="open" data-open="2">Why care?</button>
+            <button data-tab-action="open" data-open="3">Try it</button>
+          </nav>
+          <div data-content>
+            <div data-tab="1">
+              <p>This is a feed item. But it's also an interactive component — with tabs, styling, and rich HTML.</p>
+            </div>
+            <div data-tab="2">
+              <p>Because feeds inside a New Tab page = distraction-free reading, right where you work.</p>
+            </div>
+            <div data-tab="3">
+              <p>Click the tabs above. Yes — <b>that works inside a feed item</b>. No special setup required.</p>
+            </div>
+          </div>
+        </div>
+      ]]></description>
+    </item>
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- ITEM 2 — v1.5.9 Update (Grid + Details flex)                   -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <item>
+      <title>🎉 v1.5.9 — Virtual Notes + Clockworx</title>
+      <link>https://chromewebstore.google.com/detail/speedtab/adkjbdepojalajhfkoobiedddlnoamff</link>
+      <guid isPermaLink="false">speedtab-news-159</guid>
+      <pubDate>Tue, 22 Sep 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[
+        <div data-st-grid="2" data-st-gap="12px">
+          <div data-st-bg-color="var(--st-color-success)"
+               data-st-color="var(--st-color-success-contrast)"
+               data-st-padding="10px 14px"
+               data-st-border-radius="6px"
+               data-st-text-align="center">
+            <b>🎉 Live now</b>
+          </div>
+          <div data-st-bg-color="rgba(255,255,255,0.05)"
+               data-st-padding="10px 14px"
+               data-st-border-radius="6px"
+               data-st-text-align="center">
+            <b>v1.5.9</b>
+          </div>
+        </div>
+
+        <details data-st-margin-top="12px">
+          <summary data-st-font-weight="600">What's new?</summary>
+          <ul data-st-padding-left="20px" data-st-margin-top="8px" data-st-line-height="1.7">
+            <li><b>Virtual notes</b> — launch self-contained notes from any HTML surface</li>
+            <li><b>Clockworx</b> — world-clock generator with 175 timezones</li>
+            <li><b>Per-page note visibility</b> — notes follow their page context</li>
+            <li><b>Controlled presentation CSS</b> for fetched content</li>
+          </ul>
+        </details>
+      ]]></description>
+    </item>
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- ITEM 3 — Add your first feed (Steps + Callout flex)            -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <item>
+      <title>📚 How to add your first feed</title>
+      <link>https://5elementsdesign.github.io/Speedtab/docs/feeds/add</link>
+      <guid isPermaLink="false">speedtab-news-add-feed</guid>
+      <pubDate>Mon, 21 Sep 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[
+        <ol data-st-padding-left="24px" data-st-line-height="1.9" data-st-margin="0">
+          <li>Click <b>+ Source</b> in the feed module header</li>
+          <li>Paste your RSS or Atom URL</li>
+          <li>Click <b>Test</b> to verify it works</li>
+          <li>Save — done. Speedtab fetches it on demand or on schedule</li>
+        </ol>
+
+        <p data-st-bg-color="var(--st-color-warning)"
+           data-st-color="var(--st-color-warning-contrast)"
+           data-st-padding="10px 14px"
+           data-st-border-radius="6px"
+           data-st-margin-top="12px"
+           data-st-margin-bottom="0">
+          💡 <b>Tip:</b> Many sites hide their feed URL. Use the <b>Lookup</b> button to auto-discover it.
+        </p>
+      ]]></description>
+    </item>
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- ITEM 4 — Archive items (Left-nav tabs flex)                    -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <item>
+      <title>💡 Archive interesting items</title>
+      <link>https://5elementsdesign.github.io/Speedtab/docs/feeds/archive</link>
+      <guid isPermaLink="false">speedtab-news-archive</guid>
+      <pubDate>Sun, 20 Sep 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[
+        <div data-yai-tabs data-theme="default" data-nav="left" data-color-accent="secondary" data-auto-accessibility="false">
+          <nav data-controller>
+            <button data-tab-action="open" data-open="1" data-default>Why archive?</button>
+            <button data-tab-action="open" data-open="2">How to do it</button>
+            <button data-tab-action="open" data-open="3">Where it lives</button>
+          </nav>
+          <div data-content>
+            <div data-tab="1">
+              <p>Feeds roll over. Archives don't. Keep what matters — forever, locally.</p>
+            </div>
+            <div data-tab="2">
+              <p>Click the <b>Save</b> button on any item. Add an optional comment. Done.</p>
+            </div>
+            <div data-tab="3">
+              <p>Archived items live in IndexedDB, right next to your workspace. They're exportable and portable.</p>
+            </div>
+          </div>
+        </div>
+      ]]></description>
+    </item>
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- ITEM 5 — v1.5.8 Update (Flex layout flex)                      -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <item>
+      <title>🎉 v1.5.8 — Dark/Light theme switch</title>
+      <link>https://chromewebstore.google.com/detail/speedtab/adkjbdepojalajhfkoobiedddlnoamff</link>
+      <guid isPermaLink="false">speedtab-news-158</guid>
+      <pubDate>Sat, 19 Sep 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[
+        <div data-st-display="flex" data-st-gap="12px" data-st-align-items="center" data-st-justify-content="center">
+          <span data-st-bg-color="#1a1a1a"
+                data-st-color="#fff"
+                data-st-padding="8px 16px"
+                data-st-border-radius="6px">
+            🌙 Dark
+          </span>
+          <span data-st-color="rgba(255,255,255,0.3)">/</span>
+          <span data-st-bg-color="#f0f0f0"
+                data-st-color="#1a1a1a"
+                data-st-padding="8px 16px"
+                data-st-border-radius="6px">
+            ☀️ Light
+          </span>
+        </div>
+
+        <p data-st-margin-top="16px" data-st-text-align="center">
+          Native theme switch. Zero config. Just works.
+        </p>
+        <p data-st-margin-top="8px" data-st-text-align="center" data-st-font-size="0.85rem" data-st-opacity="0.7">
+          Also in v1.5.8: active background markers, shared state objects, zoom-aware grid fallback.
+        </p>
+      ]]></description>
+    </item>
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- ITEM 6 — Auto-refresh explained (Icon grid flex)               -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <item>
+      <title>⚙️ Feed auto-refresh explained</title>
+      <link>https://5elementsdesign.github.io/Speedtab/docs/feeds/auto-refresh</link>
+      <guid isPermaLink="false">speedtab-news-auto-refresh</guid>
+      <pubDate>Fri, 18 Sep 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[
+        <div data-st-grid="3" data-st-gap="8px">
+          <div data-st-bg-color="rgba(255,255,255,0.05)"
+               data-st-padding="12px"
+               data-st-border-radius="6px"
+               data-st-text-align="center">
+            <div data-st-font-size="1.6rem">🔕</div>
+            <small>Off</small>
+          </div>
+          <div data-st-bg-color="var(--st-color-primary)"
+               data-st-color="var(--st-color-primary-contrast)"
+               data-st-padding="12px"
+               data-st-border-radius="6px"
+               data-st-text-align="center">
+            <div data-st-font-size="1.6rem">⏱</div>
+            <small>On demand</small>
+          </div>
+          <div data-st-bg-color="rgba(255,255,255,0.05)"
+               data-st-padding="12px"
+               data-st-border-radius="6px"
+               data-st-text-align="center">
+            <div data-st-font-size="1.6rem">🔄</div>
+            <small>Auto</small>
+          </div>
+        </div>
+
+        <p data-st-margin-top="14px">
+          Auto-refresh runs in the background while the tab is visible.
+          No CPU cost when the tab is hidden. Each feed tab can have its own interval.
+        </p>
+      ]]></description>
+    </item>
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- ITEM 7 — In-feed search & filter (Pill badges flex)            -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <item>
+      <title>🔍 In-feed search &amp; filter</title>
+      <link>https://5elementsdesign.github.io/Speedtab/docs/feeds/search</link>
+      <guid isPermaLink="false">speedtab-news-search</guid>
+      <pubDate>Thu, 17 Sep 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[
+        <p data-st-margin-top="0">
+          Type in the feed header to filter loaded items instantly.
+          No requests, no waiting — everything is already local.
+        </p>
+
+        <div data-st-display="flex"
+             data-st-gap="8px"
+             data-st-flex-wrap="wrap"
+             data-st-margin-top="14px">
+          <span data-st-bg-color="var(--st-color-primary)"
+                data-st-color="var(--st-color-primary-contrast)"
+                data-st-padding="6px 12px"
+                data-st-border-radius="14px"
+                data-st-font-size="0.8rem">
+            New
+          </span>
+          <span data-st-bg-color="rgba(255,255,255,0.08)"
+                data-st-padding="6px 12px"
+                data-st-border-radius="14px"
+                data-st-font-size="0.8rem">
+            Unread
+          </span>
+          <span data-st-bg-color="rgba(255,255,255,0.08)"
+                data-st-padding="6px 12px"
+                data-st-border-radius="14px"
+                data-st-font-size="0.8rem">
+            All sources
+          </span>
+          <span data-st-bg-color="rgba(255,255,255,0.08)"
+                data-st-padding="6px 12px"
+                data-st-border-radius="14px"
+                data-st-font-size="0.8rem">
+            Search
+          </span>
+        </div>
+      ]]></description>
+    </item>
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- ITEM 8 — v1.5.7 Wallspeed (Gradient flex)                      -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <item>
+      <title>🎉 v1.5.7 — Wallspeed</title>
+      <link>https://chromewebstore.google.com/detail/speedtab/adkjbdepojalajhfkoobiedddlnoamff</link>
+      <guid isPermaLink="false">speedtab-news-157</guid>
+      <pubDate>Wed, 16 Sep 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[
+        <p data-st-bg-color="linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
+           data-st-color="#fff"
+           data-st-padding="24px 16px"
+           data-st-border-radius="10px"
+           data-st-text-align="center"
+           data-st-margin="0">
+          <b data-st-font-size="1.4rem" data-st-display="block">🎨 Wallspeed</b>
+          <small data-st-display="block" data-st-margin-top="6px">Instant wallpaper picker</small>
+        </p>
+
+        <p data-st-margin-top="14px" data-st-text-align="center" data-st-font-size="0.9rem" data-st-opacity="0.8">
+          Colors, gradients, and 20+ curated wallpapers — all in a note, all one click away.
+        </p>
+      ]]></description>
+    </item>
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- ITEM 9 — Custom CSS in feed items (Code + live flex)           -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <item>
+      <title>🎨 Custom CSS in feed items</title>
+      <link>https://5elementsdesign.github.io/Speedtab/docs/style-api</link>
+      <guid isPermaLink="false">speedtab-news-style-api</guid>
+      <pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[
+        <p data-st-margin-top="0">
+          Feed items use the same <code>data-st-*</code> attribute API as notes.
+          Style anything, anywhere — no inline <code>style=""</code> required.
+        </p>
+
+        <pre data-st-bg-color="rgba(0,0,0,0.4)"
+             data-st-padding="12px"
+             data-st-border-radius="6px"
+             data-st-font-size="0.8rem"
+             data-st-overflow="auto"
+             data-st-margin="12px 0">&lt;p data-st-bg-color="var(--st-color-primary)"
+   data-st-color="var(--st-color-primary-contrast)"
+   data-st-padding="12px"
+   data-st-border-radius="6px"&gt;
+  Rich content!
+&lt;/p&gt;</pre>
+
+        <p data-st-bg-color="var(--st-color-primary)"
+           data-st-color="var(--st-color-primary-contrast)"
+           data-st-padding="12px"
+           data-st-border-radius="6px"
+           data-st-margin="0">
+          Rich content!
+        </p>
+      ]]></description>
+    </item>
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- ITEM 10 — Roadmap (Top-nav tabs flex)                          -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <item>
+      <title>🚀 What's coming next</title>
+      <link>https://5elementsdesign.github.io/Speedtab/docs/roadmap</link>
+      <guid isPermaLink="false">speedtab-news-roadmap</guid>
+      <pubDate>Mon, 14 Sep 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[
+        <div data-yai-tabs data-theme="dark" data-nav="top" data-color-accent="secondary" data-auto-accessibility="false">
+          <nav data-controller>
+            <button data-tab-action="open" data-open="1" data-default>Short term</button>
+            <button data-tab-action="open" data-open="2">Mid term</button>
+            <button data-tab-action="open" data-open="3">Long term</button>
+          </nav>
+          <div data-content>
+            <div data-tab="1">
+              <ul data-st-padding-left="20px" data-st-line-height="1.7" data-st-margin="0">
+                <li>Calendar module</li>
+                <li>Kanban view for ToDo</li>
+                <li>More widget types</li>
+              </ul>
+            </div>
+            <div data-tab="2">
+              <ul data-st-padding-left="20px" data-st-line-height="1.7" data-st-margin="0">
+                <li>Cross-device sync improvements</li>
+                <li>Community feed sources</li>
+                <li>AI-powered search</li>
+              </ul>
+            </div>
+            <div data-tab="3">
+              <ul data-st-padding-left="20px" data-st-line-height="1.7" data-st-margin="0">
+                <li>Plugin API</li>
+                <li>Theme marketplace</li>
+                <li>Who knows? 🚀</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      ]]></description>
+    </item>
+
+  </channel>
+</rss>
