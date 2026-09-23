@@ -29,10 +29,11 @@
 
         <div data-yai-tabs
           data-closable="true"
+          data-behavior="blur"
           data-theme="default"
           data-color-accent="primary"
           data-auto-accessibility="false"
-         class="tab-active"
+          class="tab-active"
         >
           <nav data-controller>
             <button data-tab-action="open" data-open="1" class="active">What is this?</button>
@@ -144,7 +145,14 @@
       <pubDate>Sun, 20 Sep 2026 00:00:00 GMT</pubDate>
       <dc:creator>Speedy E</dc:creator>
       <description><![CDATA[
-        <div data-yai-tabs data-closable="true" data-theme="default" data-nav="left" data-color-accent="secondary" data-auto-accessibility="false">
+        <div data-yai-tabs
+          data-closable="true"
+          data-behavior="blur"
+          data-theme="default"
+          data-nav="left"
+          data-color-accent="secondary"
+          data-auto-accessibility="false"
+        >
           <nav data-controller>
             <button data-tab-action="open" data-open="1" data-default>Why archive?</button>
             <button data-tab-action="open" data-open="2">How to do it</button>
@@ -337,7 +345,14 @@
       <pubDate>Mon, 14 Sep 2026 00:00:00 GMT</pubDate>
       <dc:creator>Speedy E</dc:creator>
       <description><![CDATA[
-        <div data-yai-tabs data-closable="true" data-theme="dark" data-nav="top" data-color-accent="secondary" data-auto-accessibility="false">
+        <div data-yai-tabs
+          data-closable="true"
+          data-behavior="blur"
+          data-theme="dark"
+          data-nav="top"
+          data-color-accent="secondary"
+          data-auto-accessibility="false"
+        >
           <nav data-controller>
             <button data-tab-action="open" data-open="1" data-default>Short term</button>
             <button data-tab-action="open" data-open="2">Mid term</button>
