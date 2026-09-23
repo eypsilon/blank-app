@@ -26,14 +26,20 @@
           👋 <b>Welcome!</b> You're looking at Speedtab's own feed source — a demonstration of what's possible with the RSS module.
         </p>
 
-        <div data-yai-tabs data-closable="true" data-theme="default" data-color-accent="primary" data-auto-accessibility="false">
+        <div data-yai-tabs
+          data-closable="true"
+          data-theme="default"
+          data-color-accent="primary"
+          data-auto-accessibility="false"
+         class="tab-active"
+        >
           <nav data-controller>
-            <button data-tab-action="open" data-open="1" data-default data-inview-default>What is this?</button>
+            <button data-tab-action="open" data-open="1" class="active">What is this?</button>
             <button data-tab-action="open" data-open="2">Why care?</button>
             <button data-tab-action="open" data-open="3">Try it</button>
           </nav>
           <div data-content>
-            <div data-tab="1">
+            <div data-tab="1" class="active">
               <p>This is a feed item. But it's also an interactive component — with tabs, styling, and rich HTML.</p>
             </div>
             <div data-tab="2">
