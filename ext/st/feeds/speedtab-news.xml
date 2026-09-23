@@ -3,7 +3,7 @@
   <channel>
     <title>Speedtab News &amp; Tips</title>
     <link>https://5elementsdesign.github.io/Speedtab/</link>
-    <atom:link href="https://example.github.io/speedtab-news/speedtab-news.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://5elementsdesign.github.io/Speedtab/ext/st/feeds/speedtab-news.xml" rel="self" type="application/rss+xml" />
     <description>Updates, tutorials, and tips from Speedtab — the ultra-fast, local-first New Tab workspace.</description>
     <language>en</language>
     <lastBuildDate>Wed, 23 Sep 2026 00:00:00 GMT</lastBuildDate>
@@ -26,7 +26,7 @@
           👋 <b>Welcome!</b> You're looking at Speedtab's own feed source — a demonstration of what's possible with the RSS module.
         </p>
 
-        <div data-yai-tabs data-theme="default" data-color-accent="primary" data-auto-accessibility="false">
+        <div data-yai-tabs data-closable="true" data-theme="default" data-color-accent="primary" data-auto-accessibility="false">
           <nav data-controller>
             <button data-tab-action="open" data-open="1" data-default>What is this?</button>
             <button data-tab-action="open" data-open="2">Why care?</button>
@@ -53,7 +53,6 @@
                 <button
                   data-click="openQuicknote"
                   type="button"
-                  role="menuitem"
                   data-btn="primary">Open Quicknote</button>
               </p>
             </div>
@@ -135,7 +134,7 @@
       <guid isPermaLink="false">speedtab-news-archive</guid>
       <pubDate>Sun, 20 Sep 2026 00:00:00 GMT</pubDate>
       <description><![CDATA[
-        <div data-yai-tabs data-theme="default" data-nav="left" data-color-accent="secondary" data-auto-accessibility="false">
+        <div data-yai-tabs data-closable="true" data-theme="default" data-nav="left" data-color-accent="secondary" data-auto-accessibility="false">
           <nav data-controller>
             <button data-tab-action="open" data-open="1" data-default>Why archive?</button>
             <button data-tab-action="open" data-open="2">How to do it</button>
@@ -240,54 +239,7 @@
     </item>
 
     <!-- ═══════════════════════════════════════════════════════════════ -->
-    <!-- ITEM 7 — In-feed search & filter (Pill badges flex)            -->
-    <!-- ═══════════════════════════════════════════════════════════════ -->
-    <item>
-      <title>🔍 In-feed search &amp; filter</title>
-      <link>https://5elementsdesign.github.io/Speedtab/docs/feeds/search</link>
-      <guid isPermaLink="false">speedtab-news-search</guid>
-      <pubDate>Thu, 17 Sep 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[
-        <p data-st-margin-top="0">
-          Type in the feed header to filter loaded items instantly.
-          No requests, no waiting — everything is already local.
-        </p>
-
-        <div data-st-display="flex"
-             data-st-gap="8px"
-             data-st-flex-wrap="wrap"
-             data-st-margin-top="14px">
-          <span data-st-bg-color="var(--st-color-primary)"
-                data-st-color="var(--st-color-primary-contrast)"
-                data-st-padding="6px 12px"
-                data-st-border-radius="14px"
-                data-st-font-size="0.8rem">
-            New
-          </span>
-          <span data-st-bg-color="rgba(255,255,255,0.08)"
-                data-st-padding="6px 12px"
-                data-st-border-radius="14px"
-                data-st-font-size="0.8rem">
-            Unread
-          </span>
-          <span data-st-bg-color="rgba(255,255,255,0.08)"
-                data-st-padding="6px 12px"
-                data-st-border-radius="14px"
-                data-st-font-size="0.8rem">
-            All sources
-          </span>
-          <span data-st-bg-color="rgba(255,255,255,0.08)"
-                data-st-padding="6px 12px"
-                data-st-border-radius="14px"
-                data-st-font-size="0.8rem">
-            Search
-          </span>
-        </div>
-      ]]></description>
-    </item>
-
-    <!-- ═══════════════════════════════════════════════════════════════ -->
-    <!-- ITEM 8 — v1.5.7 Wallspeed (The Speed of Wall)                  -->
+    <!-- ITEM 7 — v1.5.7 Wallspeed (The Speed of Wall)                  -->
     <!-- ═══════════════════════════════════════════════════════════════ -->
     <item>
       <title>🎉 v1.5.7 — Wallspeed: The Speed of Wall</title>
@@ -302,15 +254,15 @@
           data-st-text-align="center"
           data-st-margin="0">
           <b data-st-font-size="1.5rem" data-st-display="block" data-st-margin-bottom="4px">
-            <span class="mr-1" data-st-font-size="1rem">🏁</span>
+            <span class="mirror mr-1" data-st-font-size="1rem">🏁</span>
             Wallspeed
-            <span class="mirror ml-1" data-st-font-size="1rem">🏁</span>
+            <span class="ml-1" data-st-font-size="1rem">🏁</span>
           </b>
           <b data-st-display="block" data-st-opacity="0.85" data-st-font-size="15px">The Speed of Wall.</b>
         </p>
 
         <p data-st-margin-top="16px" data-st-text-align="center" data-st-font-size="0.9rem" data-st-opacity="0.85">
-          Litespeed's most feared competitor has entered the room.
+          Litespeed's most feared competitor has entered the feed.
         </p>
 
         <p data-st-bg-color="rgba(255,255,255,0.05)"
@@ -320,13 +272,13 @@
           data-st-margin-bottom="0">
           <b>What it does:</b> One click loads a curated color and wallpaper gallery,
           lets you preview them live, and applies your choice instantly.
-          All from a note. All loaded from a remote URL. All rendered in under 2 seconds.
+          All from a note. All loaded from a remote URL and rendered locally.
         </p>
       ]]></description>
     </item>
 
     <!-- ═══════════════════════════════════════════════════════════════ -->
-    <!-- ITEM 9 — Custom CSS in feed items (Code + live flex)           -->
+    <!-- ITEM 8 — Custom CSS in feed items (Code + live flex)           -->
     <!-- ═══════════════════════════════════════════════════════════════ -->
     <item>
       <title>🎨 Custom CSS in feed items</title>
@@ -362,7 +314,7 @@
     </item>
 
     <!-- ═══════════════════════════════════════════════════════════════ -->
-    <!-- ITEM 10 — Roadmap (Top-nav tabs flex)                          -->
+    <!-- ITEM 9 — Roadmap (Top-nav tabs flex)                           -->
     <!-- ═══════════════════════════════════════════════════════════════ -->
     <item>
       <title>🚀 What's coming next</title>
@@ -370,7 +322,7 @@
       <guid isPermaLink="false">speedtab-news-roadmap</guid>
       <pubDate>Mon, 14 Sep 2026 00:00:00 GMT</pubDate>
       <description><![CDATA[
-        <div data-yai-tabs data-theme="dark" data-nav="top" data-color-accent="secondary" data-auto-accessibility="false">
+        <div data-yai-tabs data-closable="true" data-theme="dark" data-nav="top" data-color-accent="secondary" data-auto-accessibility="false">
           <nav data-controller>
             <button data-tab-action="open" data-open="1" data-default>Short term</button>
             <button data-tab-action="open" data-open="2">Mid term</button>
