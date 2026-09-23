@@ -13,7 +13,7 @@
     <!-- ITEM 1 — Welcome (YaiTabs flex)                                -->
     <!-- ═══════════════════════════════════════════════════════════════ -->
     <item>
-      <title>👋 Welcome to the Feed Module</title>
+      <title>Welcome to the Feed Module</title>
       <link>https://5elementsdesign.github.io/Speedtab/docs/feeds</link>
       <guid isPermaLink="false">speedtab-news-welcome</guid>
       <pubDate>Wed, 23 Sep 2026 00:00:00 GMT</pubDate>
@@ -71,7 +71,7 @@
     <!-- ITEM 2 — v1.5.9 Update (Grid + Details flex)                   -->
     <!-- ═══════════════════════════════════════════════════════════════ -->
     <item>
-      <title>🎉 v1.5.9 — Virtual Notes + Clockworx</title>
+      <title>v1.5.9 — Virtual Notes + Clockworx</title>
       <link>https://chromewebstore.google.com/detail/speedtab/adkjbdepojalajhfkoobiedddlnoamff</link>
       <guid isPermaLink="false">speedtab-news-159</guid>
       <pubDate>Tue, 22 Sep 2026 00:00:00 GMT</pubDate>
@@ -108,7 +108,7 @@
     <!-- ITEM 3 — Add your first feed (Steps + Callout flex)            -->
     <!-- ═══════════════════════════════════════════════════════════════ -->
     <item>
-      <title>📚 How to add your first feed</title>
+      <title>How to add your first feed</title>
       <link>https://5elementsdesign.github.io/Speedtab/docs/feeds/add</link>
       <guid isPermaLink="false">speedtab-news-add-feed</guid>
       <pubDate>Mon, 21 Sep 2026 00:00:00 GMT</pubDate>
@@ -135,7 +135,7 @@
     <!-- ITEM 4 — Archive items (Left-nav tabs flex)                    -->
     <!-- ═══════════════════════════════════════════════════════════════ -->
     <item>
-      <title>💡 Archive interesting items</title>
+      <title>Archive interesting items</title>
       <link>https://5elementsdesign.github.io/Speedtab/docs/feeds/archive</link>
       <guid isPermaLink="false">speedtab-news-archive</guid>
       <pubDate>Sun, 20 Sep 2026 00:00:00 GMT</pubDate>
@@ -165,7 +165,7 @@
     <!-- ITEM 5 — v1.5.8 Update (Interactive theme switch)              -->
     <!-- ═══════════════════════════════════════════════════════════════ -->
     <item>
-      <title>🎉 v1.5.8 — Dark/Light theme switch</title>
+      <title>v1.5.8 — Dark/Light theme switch</title>
       <link>https://chromewebstore.google.com/detail/speedtab/adkjbdepojalajhfkoobiedddlnoamff</link>
       <guid isPermaLink="false">speedtab-news-158</guid>
       <pubDate>Sat, 19 Sep 2026 00:00:00 GMT</pubDate>
@@ -207,7 +207,7 @@
     <!-- ITEM 6 — Auto-refresh explained (Icon grid flex)               -->
     <!-- ═══════════════════════════════════════════════════════════════ -->
     <item>
-      <title>⚙️ Feed auto-refresh explained</title>
+      <title>Feed auto-refresh explained</title>
       <link>https://5elementsdesign.github.io/Speedtab/docs/feeds/auto-refresh</link>
       <guid isPermaLink="false">speedtab-news-auto-refresh</guid>
       <pubDate>Fri, 18 Sep 2026 00:00:00 GMT</pubDate>
@@ -248,7 +248,7 @@
     <!-- ITEM 7 — v1.5.7 Wallspeed (The Speed of Wall)                  -->
     <!-- ═══════════════════════════════════════════════════════════════ -->
     <item>
-      <title>🎉 v1.5.7 — Wallspeed: The Speed of Wall</title>
+      <title>v1.5.7 — Wallspeed: The Speed of Wall</title>
       <link>https://chromewebstore.google.com/detail/speedtab/adkjbdepojalajhfkoobiedddlnoamff</link>
       <guid isPermaLink="false">speedtab-news-157</guid>
       <pubDate>Wed, 16 Sep 2026 00:00:00 GMT</pubDate>
@@ -287,7 +287,7 @@
     <!-- ITEM 8 — Custom CSS in feed items (Code + live flex)           -->
     <!-- ═══════════════════════════════════════════════════════════════ -->
     <item>
-      <title>🎨 Custom CSS in feed items</title>
+      <title>Custom CSS in feed items</title>
       <link>https://5elementsdesign.github.io/Speedtab/docs/style-api</link>
       <guid isPermaLink="false">speedtab-news-style-api</guid>
       <pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
@@ -323,7 +323,7 @@
     <!-- ITEM 9 — Roadmap (Top-nav tabs flex)                           -->
     <!-- ═══════════════════════════════════════════════════════════════ -->
     <item>
-      <title>🚀 What's coming next</title>
+      <title>What's coming next</title>
       <link>https://5elementsdesign.github.io/Speedtab/docs/roadmap</link>
       <guid isPermaLink="false">speedtab-news-roadmap</guid>
       <pubDate>Mon, 14 Sep 2026 00:00:00 GMT</pubDate>
