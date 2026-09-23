@@ -91,7 +91,7 @@
           <summary data-st-font-weight="600">What's new?</summary>
           <ul data-st-padding-left="20px" data-st-margin-top="8px" data-st-line-height="1.7">
             <li><b>Virtual notes</b> — launch self-contained notes from any HTML surface</li>
-            <li><b>Clockworx</b> — world-clock generator with 175 timezones</li>
+            <li><b>Clockworx</b> — world-clock generator with 400+ timezones</li>
             <li><b>Per-page note visibility</b> — notes follow their page context</li>
             <li><b>Controlled presentation CSS</b> for fetched content</li>
           </ul>
@@ -301,7 +301,11 @@
           data-st-border-radius="10px"
           data-st-text-align="center"
           data-st-margin="0">
-          <b data-st-font-size="1.5rem" data-st-display="block" data-st-margin-bottom="4px">🏁 Wallspeed</b>
+          <b data-st-font-size="1.5rem" data-st-display="block" data-st-margin-bottom="4px">
+            <span class="mr-1" data-st-font-size="1rem">🏁</span>
+            Wallspeed
+            <span class="mirror ml-1" data-st-font-size="1rem">🏁</span>
+          </b>
           <small data-st-display="block" data-st-opacity="0.85">The Speed of Wall.</small>
         </p>
 
