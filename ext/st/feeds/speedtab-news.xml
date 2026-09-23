@@ -28,7 +28,7 @@
 
         <div data-yai-tabs data-closable="true" data-theme="default" data-color-accent="primary" data-auto-accessibility="false">
           <nav data-controller>
-            <button data-tab-action="open" data-open="1" data-default>What is this?</button>
+            <button data-tab-action="open" data-open="1" data-default data-inview-default>What is this?</button>
             <button data-tab-action="open" data-open="2">Why care?</button>
             <button data-tab-action="open" data-open="3">Try it</button>
           </nav>
