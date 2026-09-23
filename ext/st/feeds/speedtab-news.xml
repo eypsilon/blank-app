@@ -41,6 +41,22 @@
             </div>
             <div data-tab="3">
               <p>Click the tabs above. Yes — <b>that works inside a feed item</b>. No special setup required.</p>
+              <p data-st-bg-color="rgba(255,255,255,0.05)"
+                data-st-padding="12px 16px"
+                data-st-border-radius="6px"
+                data-st-margin-top="12px"
+                data-st-display="flex"
+                data-st-align-items="center"
+                data-st-justify-content="space-between"
+                data-st-gap="12px">
+                <span>💡 Try the Quicknote scratchpad</span>
+                <button type="button"
+                        role="menuitem"
+                        data-click="openQuicknote"
+                        data-btn="primary">
+                 {t('scratchpad.openAction')}
+                </button>
+              </p>
             </div>
           </div>
         </div>
@@ -142,7 +158,7 @@
     </item>
 
     <!-- ═══════════════════════════════════════════════════════════════ -->
-    <!-- ITEM 5 — v1.5.8 Update (Flex layout flex)                      -->
+    <!-- ITEM 5 — v1.5.8 Update (Interactive theme switch)              -->
     <!-- ═══════════════════════════════════════════════════════════════ -->
     <item>
       <title>🎉 v1.5.8 — Dark/Light theme switch</title>
@@ -150,27 +166,35 @@
       <guid isPermaLink="false">speedtab-news-158</guid>
       <pubDate>Sat, 19 Sep 2026 00:00:00 GMT</pubDate>
       <description><![CDATA[
-        <div data-st-display="flex" data-st-gap="12px" data-st-align-items="center" data-st-justify-content="center">
-          <span data-st-bg-color="#1a1a1a"
-                data-st-color="#fff"
-                data-st-padding="8px 16px"
-                data-st-border-radius="6px">
-            🌙 Dark
-          </span>
-          <span data-st-color="rgba(255,255,255,0.3)">/</span>
-          <span data-st-bg-color="#f0f0f0"
-                data-st-color="#1a1a1a"
-                data-st-padding="8px 16px"
-                data-st-border-radius="6px">
-            ☀️ Light
-          </span>
+        <p data-st-text-align="center" data-st-margin-bottom="16px" data-st-margin-top="0">
+          <b>Try it right now</b> — this switch controls Speedtab's theme in real time:
+        </p>
+
+        <div data-st-display="flex"
+            data-st-justify-content="center"
+            data-st-margin-bottom="16px">
+          <label data-switch-component class="reverse-component-grid">
+            <input type="checkbox"
+                  role="switch"
+                  aria-label="Toggle shell theme"
+                  data-change="stToggleColorPreset"
+                  data-state-sync="shell-theme"
+                  value="light"
+                  data-toggle-value="dark">
+            <span class="state" aria-hidden="true">
+              <span class="container"><span class="knob"></span></span>
+              <span class="off">Dark</span>
+              <span class="on">Light</span>
+            </span>
+          </label>
         </div>
 
-        <p data-st-margin-top="16px" data-st-text-align="center">
-          Native theme switch. Zero config. Just works.
-        </p>
-        <p data-st-margin-top="8px" data-st-text-align="center" data-st-font-size="0.85rem" data-st-opacity="0.7">
-          Also in v1.5.8: active background markers, shared state objects, zoom-aware grid fallback.
+        <p data-st-margin="0"
+          data-st-text-align="center"
+          data-st-font-size="0.85rem"
+          data-st-opacity="0.75">
+          Yes — that's a real, working control inside a feed item.
+          Same pattern as YaiTabs: <code>data-change</code> + YEH delegation.
         </p>
       ]]></description>
     </item>
