@@ -306,7 +306,7 @@
             Wallspeed
             <span class="mirror ml-1" data-st-font-size="1rem">🏁</span>
           </b>
-          <small data-st-display="block" data-st-opacity="0.85">The Speed of Wall.</small>
+          <b data-st-display="block" data-st-opacity="0.85" data-st-font-size="15px">The Speed of Wall.</b>
         </p>
 
         <p data-st-margin-top="16px" data-st-text-align="center" data-st-font-size="0.9rem" data-st-opacity="0.85">
