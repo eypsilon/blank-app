@@ -50,12 +50,11 @@
                 data-st-justify-content="space-between"
                 data-st-gap="12px">
                 <span>💡 Try the Quicknote scratchpad</span>
-                <button type="button"
-                        role="menuitem"
-                        data-click="openQuicknote"
-                        data-btn="primary">
-                 {t('scratchpad.openAction')}
-                </button>
+                <button
+                  data-click="openQuicknote"
+                  type="button"
+                  role="menuitem"
+                  data-btn="primary">Open Quicknote</button>
               </p>
             </div>
           </div>
