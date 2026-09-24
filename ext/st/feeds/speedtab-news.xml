@@ -297,7 +297,7 @@
             Wallspeed
             <span class="ml-1" data-st-font-size="1rem">🏁</span>
           </b>
-          <b data-st-display="block" data-st-opacity="0.85" data-st-font-size="15px">The Speed of Wall.</b>
+          <b data-st-display="block" data-st-opacity="0.85" data-st-font-size="15px">The Speed of Wall</b>
         </p>
 
         <p data-st-margin-top="16px" data-st-text-align="center" data-st-font-size="0.9rem" data-st-opacity="0.85">
@@ -354,7 +354,90 @@
     </item>
 
     <!-- ═══════════════════════════════════════════════════════════════ -->
-    <!-- ITEM 9 — Roadmap (Top-nav tabs flex)                           -->
+    <!-- ITEM 9 — World Clock (Interactive showcase)                    -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <item>
+      <title>World Clock — 418 timezones, one note</title>
+      <link>https://5elementsdesign.github.io/Speedtab/docs/clockworx</link>
+      <guid isPermaLink="false">speedtab-news-worldclock</guid>
+      <pubDate>Thu, 23 Sep 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Speedy E</dc:creator>
+      <description><![CDATA[
+        <p data-st-bg-color="linear-gradient(135deg, #1a3c5e 0%, #2d5016 100%)"
+          data-st-color="#fff"
+          data-st-padding="24px 20px"
+          data-st-border-radius="10px"
+          data-st-text-align="center"
+          data-st-margin="0">
+          <b data-st-font-size="1.4rem" data-st-display="block">🌍 World Clock</b>
+          <small data-st-display="block" data-st-opacity="0.85" data-st-margin-top="4px">
+            Your world. Your timezone. Your perspective.
+          </small>
+        </p>
+
+        <p data-st-margin-top="16px">
+          Every timezone in the IANA database, organized by region:
+        </p>
+
+        <div data-st-display="flex" data-st-gap="6px" data-st-flex-wrap="wrap" data-st-margin-top="12px">
+          <span data-st-bg-color="rgba(255,255,255,0.08)" data-st-padding="4px 10px" data-st-border-radius="12px" data-st-font-size="0.75rem">
+            Africa · 52
+          </span>
+          <span data-st-bg-color="rgba(255,255,255,0.08)" data-st-padding="4px 10px" data-st-border-radius="12px" data-st-font-size="0.75rem">
+            America · 144
+          </span>
+          <span data-st-bg-color="rgba(255,255,255,0.08)" data-st-padding="4px 10px" data-st-border-radius="12px" data-st-font-size="0.75rem">
+            Asia · 82
+          </span>
+          <span data-st-bg-color="rgba(255,255,255,0.08)" data-st-padding="4px 10px" data-st-border-radius="12px" data-st-font-size="0.75rem">
+            Europe · 58
+          </span>
+          <span data-st-bg-color="rgba(255,255,255,0.08)" data-st-padding="4px 10px" data-st-border-radius="12px" data-st-font-size="0.75rem">
+            Australia · 11
+          </span>
+          <span data-st-bg-color="rgba(255,255,255,0.08)" data-st-padding="4px 10px" data-st-border-radius="12px" data-st-font-size="0.75rem">
+            Pacific · 38
+          </span>
+          <span data-st-bg-color="rgba(255,255,255,0.08)" data-st-padding="4px 10px" data-st-border-radius="12px" data-st-font-size="0.75rem">
+            Indian · 11
+          </span>
+          <span data-st-bg-color="rgba(255,255,255,0.08)" data-st-padding="4px 10px" data-st-border-radius="12px" data-st-font-size="0.75rem">
+            Atlantic · 10
+          </span>
+          <span data-st-bg-color="rgba(255,255,255,0.08)" data-st-padding="4px 10px" data-st-border-radius="12px" data-st-font-size="0.75rem">
+            Antarctica · 11
+          </span>
+          <span data-st-bg-color="rgba(255,255,255,0.08)" data-st-padding="4px 10px" data-st-border-radius="12px" data-st-font-size="0.75rem">
+            Arctic · 1
+          </span>
+        </div>
+
+        <p data-st-bg-color="rgba(255,255,255,0.05)"
+          data-st-padding="12px 16px"
+          data-st-border-radius="6px"
+          data-st-margin-top="16px"
+          data-st-margin-bottom="0">
+          <b>How it works:</b> Choose your timezones from collapsible category lists.
+          Your system timezone becomes the default reference, so colors show whether
+          each clock is behind, near, or ahead of <em>your</em> time.
+          All 418 clocks run on one App Clock tick.
+        </p>
+
+        <p data-st-text-align="center" data-st-margin-top="16px" data-st-margin-bottom="0">
+          <button type="button"
+                  data-click="openVirtualNote"
+                  data-btn="light"
+                  data-note-json='{"title":"World Clock — Live Demo","type":"html","style_token":"secondary","preview":"Cross-continental timezones in sync","width":900,"height":700,"content":"<div data-world-clock><div data-clock-zone=\"Europe/Berlin\"><time data-date data-date-format=\"{d} {M} {Y}\"></time><hr><time data-clock data-seconds></time></div><div data-clock-zone=\"America/New_York\"><time data-clock data-seconds></time></div><div data-clock-zone=\"America/Los_Angeles\"><time data-clock data-seconds></time></div><div data-clock-zone=\"Europe/London\"><time data-clock data-seconds></time></div><div data-clock-zone=\"Europe/Paris\"><time data-clock data-seconds></time></div><div data-clock-zone=\"Asia/Dubai\"><time data-clock data-seconds></time></div><div data-clock-zone=\"Asia/Kolkata\"><time data-clock data-seconds></time></div><div data-clock-zone=\"Asia/Shanghai\"><time data-clock data-seconds></time></div><div data-clock-zone=\"Asia/Tokyo\"><time data-clock data-seconds></time></div><div data-clock-zone=\"Australia/Sydney\"><time data-clock data-seconds></time></div></div>"}'>Open live demo</button>
+        </p>
+
+        <p data-st-text-align="center" data-st-margin-top="8px" data-st-font-size="0.85rem" data-st-opacity="0.7" data-st-margin-bottom="0">
+          Ten zones, one tick, zero drift.
+        </p>
+      ]]></description>
+    </item>
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- ITEM 10 — Roadmap (Top-nav tabs flex)                           -->
     <!-- ═══════════════════════════════════════════════════════════════ -->
     <item>
       <title>What's coming next</title>
