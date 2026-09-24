@@ -24,7 +24,7 @@
            data-st-padding="12px 16px"
            data-st-border-radius="6px"
            data-st-margin-bottom="12px">
-          👋 <b>Welcome!</b> You're looking at Speedtab's own feed source — a demonstration of what's possible with the RSS module.
+          👋 <b>Welcome!</b> You're looking at Speedtab's own feed source — a demonstration of what's possible with the Feeds module.
         </p>
 
         <div data-yai-tabs
@@ -62,6 +62,21 @@
                   data-click="openQuicknote"
                   type="button"
                   data-btn="primary">Open Quicknote</button>
+              </p>
+              <p data-st-bg-color="rgba(255,255,255,0.05)"
+                data-st-padding="12px 16px"
+                data-st-border-radius="6px"
+                data-st-margin-top="12px"
+                data-st-display="flex"
+                data-st-align-items="center"
+                data-st-justify-content="space-between"
+                data-st-gap="12px">
+                <span>📌 Open a portable virtual note</span>
+                <button
+                  data-click="openVirtualNote"
+                  type="button"
+                  data-btn="primary"
+                  data-note-json='{"title":"Speedtab mini note","type":"html","style_token":"secondary","preview":"A portable two-tab note","width":460,"height":300,"content":"<div data-yai-tabs data-theme=\"default\" data-auto-accessibility=\"false\"><nav data-controller><button data-tab-action=\"open\" data-open=\"about\" data-default>About</button><button data-tab-action=\"open\" data-open=\"share\">Share</button></nav><div data-content><div data-tab=\"about\"><p>This virtual note was opened directly from a feed item.</p><p>It behaves like a regular floating note, without first being stored in the workspace.</p></div><div data-tab=\"share\"><p>Virtual notes can carry normal note content, including nested tabs.</p><p>Save one to the Inbox when you want to keep it.</p></div></div></div>"}'>Open note</button>
               </p>
             </div>
           </div>
