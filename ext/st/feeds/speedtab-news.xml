@@ -79,7 +79,7 @@
                   data-note-json='{"title":"Speedtab mini note","type":"html","style_token":"secondary","preview":"A portable two-tab note","width":460,"height":300,"content":"<div data-yai-tabs data-theme=\"dark\" data-color-accent=\"warning\" data-auto-accessibility=\"false\"><nav data-controller><button data-tab-action=\"open\" data-open=\"about\" data-default>About</button><button data-tab-action=\"open\" data-open=\"share\">Share</button></nav><div data-content><div data-tab=\"about\"><p>This virtual note was opened directly from a feed item.</p><p>It behaves like a regular floating note, without first being stored in the workspace.</p></div><div data-tab=\"share\"><p>Virtual notes can carry normal note content, including nested tabs.</p><p>Save one to the Inbox when you want to keep it.</p></div></div></div>"}'>Open note</button>
               </p>
               <p data-st-text-align="center" data-st-margin-top="16px">
-                <button type="button" data-click="openAllArchivedFeedItems" data-btn="ghost">Open archived feed items</button>
+                <button type="button" data-click="openAllArchivedFeedItems" data-btn="light">Open archived feed items</button>
               </p>
             </div>
           </div>
