@@ -14,7 +14,7 @@
     <!-- ═══════════════════════════════════════════════════════════════ -->
     <item>
       <title>Welcome to the Feed Module</title>
-      <link>https://5elementsdesign.github.io/Speedtab/docs/feeds</link>
+      <!-- <link>https://5elementsdesign.github.io/Speedtab/docs/feeds</link> -->
       <guid isPermaLink="false">speedtab-news-welcome</guid>
       <pubDate>Wed, 23 Sep 2026 00:00:00 GMT</pubDate>
       <dc:creator>Speedy E</dc:creator>
@@ -130,7 +130,7 @@
     <!-- ═══════════════════════════════════════════════════════════════ -->
     <item>
       <title>How to add your first feed</title>
-      <link>https://5elementsdesign.github.io/Speedtab/docs/feeds/add</link>
+      <!-- <link>https://5elementsdesign.github.io/Speedtab/docs/feeds/add</link> -->
       <guid isPermaLink="false">speedtab-news-add-feed</guid>
       <pubDate>Mon, 21 Sep 2026 00:00:00 GMT</pubDate>
       <dc:creator>Speedy E</dc:creator>
@@ -158,7 +158,7 @@
     <!-- ═══════════════════════════════════════════════════════════════ -->
     <item>
       <title>Archive interesting items</title>
-      <link>https://5elementsdesign.github.io/Speedtab/docs/feeds/archive</link>
+      <!-- <link>https://5elementsdesign.github.io/Speedtab/docs/feeds/archive</link> -->
       <guid isPermaLink="false">speedtab-news-archive</guid>
       <pubDate>Sun, 20 Sep 2026 00:00:00 GMT</pubDate>
       <dc:creator>Speedy E</dc:creator>
@@ -322,7 +322,7 @@
     <!-- ═══════════════════════════════════════════════════════════════ -->
     <item>
       <title>Custom CSS in feed items</title>
-      <link>https://5elementsdesign.github.io/Speedtab/docs/style-api</link>
+      <!-- <link>https://5elementsdesign.github.io/Speedtab/docs/style-api</link> -->
       <guid isPermaLink="false">speedtab-news-style-api</guid>
       <pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
       <dc:creator>Speedy E</dc:creator>
@@ -359,7 +359,7 @@
     <!-- ═══════════════════════════════════════════════════════════════ -->
     <item>
       <title>World Clock — 418 timezones, one note</title>
-      <link>https://5elementsdesign.github.io/Speedtab/docs/clockworx</link>
+      <!-- <link>https://5elementsdesign.github.io/Speedtab/docs/clockworx</link> -->
       <guid isPermaLink="false">speedtab-news-worldclock</guid>
       <pubDate>Thu, 23 Sep 2026 00:00:00 GMT</pubDate>
       <dc:creator>Speedy E</dc:creator>
@@ -442,7 +442,7 @@
     <!-- ═══════════════════════════════════════════════════════════════ -->
     <item>
       <title>What's coming next</title>
-      <link>https://5elementsdesign.github.io/Speedtab/docs/roadmap</link>
+      <!-- <link>https://5elementsdesign.github.io/Speedtab/docs/roadmap</link> -->
       <guid isPermaLink="false">speedtab-news-roadmap</guid>
       <pubDate>Mon, 14 Sep 2026 00:00:00 GMT</pubDate>
       <dc:creator>Speedy E</dc:creator>
